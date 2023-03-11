@@ -17,4 +17,9 @@
     border-style: solid;
     padding: 0.2em 0.4em;
   }
+
+  .button {
+    @apply transition-all duration-300 ease-in-out scale-100 shadow-md  shadow-black active:translate-y-1 active:shadow-none px-8 py-3 m-2 
+                text-lg font-semibold rounded;
+  }
 }

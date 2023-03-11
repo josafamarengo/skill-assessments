@@ -90,7 +90,7 @@ export default function QuizPage({ questions }: QuizPageProps) {
         "
       >
         {screenState === screenStates.QUIZ && (
-          <div className="flex flex-col items-center min-h-screen pt-12">
+          <div className="flex flex-col justify-center items-center min-h-screen -translate-y-12">
             <header className="flex items-center py-5 px-8">
               <Link href="/">
                 <BiLeftArrowAlt />

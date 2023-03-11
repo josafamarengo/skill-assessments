@@ -1,46 +1,86 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
+import { useEffect, useState } from "react";
+import fetch from "isomorphic-unfetch";
+
+import Loading from "@/components/molecules/Loading";
+
+const screenStates = {
+  PAGE: "PAGE",
+  LOADING: "LOADING",
+};
+
+interface QuizProps {
+  title: string;
+  questions: Question[];
+}
+
+interface Question {
+  question: string;
+  alternatives: Alternative[];
+}
+
+interface Alternative {
+  alternative: string;
+  is_correct: boolean;
+}
 
 function Quiz() {
+  const [screenState, setScreenState] = useState(screenStates.LOADING);
+  const [data, setData] = useState<QuizProps[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("/api/db");
+      const data = await response.json();
+      setData(data);
+    }
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setScreenState(screenStates.PAGE);
+    }, 1 * 2000);
+  }, []);
+
   return (
-    <section className="w-screen min-h-screen flex flex-col justify-center items-center">
-      <div className="max-w-screen-xl bg-red-400 px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-        <div className="flex justify-center items-center">
-          <div className="max-w-lg text-center lg:mx-0">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              Lorem ipsum dolor sit amet consectetur
-            </h2>
+    <section className="w-screen min-h-screen flex flex-col justify-center items-center pt-16">
+      {screenState === screenStates.LOADING && <Loading />}
+      {screenState === screenStates.PAGE && (
+        <div className="bg-secondary-light shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] rounded-lg max-w-screen-5xl px-4 py-8 mt-12 mb-24 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center">
+            <div className="max-w-5xl text-center lg:mx-0">
+              <h2 className="text-3xl font-bold mb-4">
+                <span className="block">
+                  Choose the skill you want to train
+                </span>
+              </h2>
 
-            <p className="mt-4 text-gray-600">
-              lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-
-            <div
-              className="
-            grid grid-cols-2 gap-4 sm:grid-cols-3
+              <div
+                className="
+            grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4
         "
-            >
-              {[1, 2, 3, 4, 5, 6].map((item, key) => (
-                <Link href={`/quiz/${item}`} key={key} legacyBehavior>
-                  <a
-                    className="
-                        block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring
+              >
+                {data.map((item, key) => (
+                  <Link href={`/quiz/${item.title}`} key={key} legacyBehavior>
+                    <a
+                      className="
+                        rounded-xl border border-gray-300 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-500 focus:outline-none focus:ring w-44 flex flex-col justify-center items-center transition-all ease-in-out duration-300
                     "
-                  >
-                    <h3 className="text-2xl font-bold">Quiz {item}</h3>
-                    <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quisquam, quod.
-                    </p>
-                  </a>
-                </Link>
-              ))}
+                    >
+                      <h3 className="text-xl font-semibold">{item.title}</h3>
+                    </a>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
 
-export default Quiz
+export default Quiz;

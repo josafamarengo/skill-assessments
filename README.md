@@ -2,20 +2,15 @@
 
   <br />
 <div align="center">
-  <a href="https://josafa.com.br">
-    <img src="https://img.icons8.com/arcade/128/null/python.png"/>
-  </a> 
+  <img src="https://img.icons8.com/3d-fluency/94/null/test-passed.png"/>
 
-  <h3 align="center">skill-assessments</h3>
+  <h3 align="center">LinkedIn Skill Quiz</h3>
 
   <p align="center">
-    Skill Assessments
-    <br/>
-    <br/>
-    <a href="https://github.com/josafamarengo/skill-assessments"><strong>Explore the docs »</strong></a>
+    Boost Your Professional Profile with LinkedIn Skill Assessments: Take the Test Now!
     <br />
     <br />
-    <a href="https://github.com/josafamarengo/skill-assessments">View Demo</a>
+    <a href="https://linkedin-skill-assessments.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/josafamarengo/skill-assessments/issues">Report Bug</a>
     ·
@@ -51,7 +46,63 @@
 
 ![skill-assessments Screen Shot](./src/assets/img/screenshots/screenshot.jpg)
 
-Skill Assessments
+I had the idea to build this project because I was planning to do some Linkedin skills assessments, but I wanted to test my knowledge first.
+
+I had already visited the [Ebazhanov's Github repository](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes) that collects questions that users have answered in their assessments.
+
+And I saw an immersion of [Alura](https://www.alura.com.br/) with [Mario Souto](https://github.com/omariosouto) and [Juliana Amoasei](https://github.com/JulianaAmoasei) in early March 2023, where they developed a quiz.
+
+When I was putting things together, I thought of using the questions available in this repository as a database for a competency quiz project.
+
+To extract the questions from the Markdown file they were in and put them into a semi-structured file like JSON, I created the following script in Python:
+
+```python	
+import markdown
+import json
+import requests
+
+# Defines the link to the Markdown file
+url_arquivo = 'https://raw.githubusercontent.com/Ebazhanov/linkedin-skill-assessments-quizzes/main/html/html-quiz.md'
+
+# Makes an HTTP request to get the contents of the file
+conteudo_arquivo = requests.get(url_arquivo).text
+
+# Converts the contents of the file from Markdown to HTML
+conteudo_html = markdown.markdown(conteudo_arquivo)
+
+# Selects only the content of the <h2> tag
+titulo = conteudo_html.split('<h2>')[1].split('</h2>')[0]
+
+# Selects only the content of the <h4> tag
+questions = conteudo_html.split('<h4>')[1:]
+questions = [q.replace('</h4>', '') for q in questions]
+
+# Separate questions from alternatives by storing them in a dictionary
+for i, q in enumerate(questions):
+    question = q.split('<ul>')[0]
+    alternatives = q.split('<li>')[1:]
+    alternatives = [a.replace('</li>', '') for a in alternatives]
+    is_correct = [True if '[x]' in a else False for a in alternatives]
+    alternatives = [a.replace('[x]', '') for a in alternatives]
+    alternatives = [a.replace('[ ]', '') for a in alternatives]
+    alternatives = [{'alternative': a, 'is_correct': c} for a, c in zip(alternatives, is_correct)]
+    questions[i] = {
+        'question': question,
+        'alternatives': alternatives
+    }
+
+# Create a dictionary to store questions
+conteudo_json = {
+    'title': titulo,
+    'questions': questions
+}
+
+nome_arquivo = titulo + '.json'
+with open(nome_arquivo, 'w') as f:
+    json.dump(conteudo_json, f)
+```
+
+From there, I created the front end to use the constant data in the JSON files.
 
 ### Build With
 
@@ -147,7 +198,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgments
 
-This work was supported by the National Science Foundation under Grant No. 0833545. The authors would like to thank the anonymous reviewers for their helpful comments.
+- [Ebazhanov](https://github.com/Ebazhanov) - [linkedin-skill-assessments-quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
+- [Alura](https://www.alura.com.br/) - AluraQuiz
+- [Ícone do Quiz](https://icons8.com/icon/f3o1AGoVZ2Un/test-passed)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

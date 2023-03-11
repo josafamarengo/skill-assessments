@@ -1,20 +1,35 @@
+import Head from "next/head";
 import React from "react";
+import { useRouter } from "next/router";
+
 import Details from "../../components/atoms/Details";
 
-function index() {
-  return (
-    <div>
-      <article>
-        <h1>What is LinkedIn Skill Assessments?</h1>
+function WhatIsLinkedinSkillAssessments() {
 
-        <p>
+  const router = useRouter();
+
+  return (
+    <div className="mx-auto bg-secondary-light rounded-lg shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] max-w-2xl px-4 py-6 my-24">
+      <Head>
+        <title>What is LinkedIn Skill Assessments?</title>
+        <meta
+          name="description"
+          content="LinkedIn Skill Assessments are a tool provided by LinkedIn to assess the skills and knowledge of professionals in various fields. They are designed to help individuals showcase their expertise and proficiency to potential employers, colleagues, and clients."
+        />
+      </Head>
+      <article className="max-w-xl mx-auto">
+        <h1 className="text-3xl font-bold mb-4">
+          What is LinkedIn Skill Assessments?
+        </h1>
+
+        <p className="mb-4">
           LinkedIn Skill Assessments are a tool provided by LinkedIn to evaluate
           the skills and knowledge of professionals in various fields. These
           assessments are designed to help individuals showcase their expertise
           and skills to potential employers, colleagues, and clients.
         </p>
 
-        <p>
+        <p className="mb-4">
           The skill assessments offered by LinkedIn cover a wide range of topics
           and skills, including software development, digital marketing, project
           management, data analytics, and many others. Each assessment consists
@@ -22,14 +37,14 @@ function index() {
           individual&apos;s understanding of the topic at hand.
         </p>
 
-        <p>
+        <p className="mb-4">
           The questions are usually designed to be challenging and to accurately
           assess the participant&apos;s knowledge and expertise. Upon completion
           of the exam, the individual receives a badge on their LinkedIn profile
           indicating that they have successfully passed the exam.
         </p>
 
-        <p>
+        <p className="mb-4">
           These badges are a powerful marketing tool for professionals because
           they can help demonstrate their expertise and distinguish them from
           other professionals in their field. In addition, employers and
@@ -37,13 +52,13 @@ function index() {
           the skills of potential employees based on these ratings.
         </p>
 
-        <p>
+        <p className="mb-4">
           LinkedIn Skill Assessments are available to all LinkedIn members, and
           participation is completely free. However, users can only take each
           assessment once every three months to prevent abuse of the system.
         </p>
 
-        <p>
+        <p className="mb-4">
           In summary, LinkedIn Skill Assessments are a valuable tool for
           professionals to showcase their skills and knowledge, stand out from
           other applicants, and increase their visibility to potential employers
@@ -51,7 +66,19 @@ function index() {
           prospects and enhance their professional profile on LinkedIn.
         </p>
       </article>
-      <section className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl">
+
+      <div className="w-full flex justify-center py-4">
+        <button className="bg-primary-light text-white font-bold py-2 px-4 rounded" onClick={() => router.push("/quiz")}>
+          Take Skill Assessment
+        </button>
+      </div>
+
+      <h2 className="text-2xl font-bold mb-4 mt-8">FAQs</h2>
+      <section
+        className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl"
+        itemScope
+        itemType="https://schema.org/FAQPage"
+      >
         <Details
           question="What are LinkedIn Skill Assessments?"
           answer="LinkedIn Skill Assessments are a tool provided by LinkedIn to assess
@@ -62,17 +89,12 @@ function index() {
 
         <Details
           question="How do I take a LinkedIn Skill Assessment?"
-          answer='To take a LinkedIn Skill Assessment, you must first create a LinkedIn
-          account. Once you have created an account, you can search for the
-          assessment you want to take by typing the name of the assessment into
-          the search bar at the top of the page. You can also search for the
-          assessment by clicking on the "Assessments" tab at the top
-          of the page. To take a LinkedIn Skill Assessment, you need to go to
+          answer="To take a LinkedIn Skill Assessment, you must first create a LinkedIn account. Once you have created an account, you need to go to
           your LinkedIn profile page and click on the Add new profile section
           button. Then, select Skills from the dropdown menu and click on the
           + icon to add a new skill. You can then select the relevant skill
           from the list and click on the Take Skill Quiz button to begin the
-          assessment.'
+          assessment."
         />
         <Details
           question="Are LinkedIn Skill Assessments free?"
@@ -102,4 +124,4 @@ function index() {
   );
 }
 
-export default index;
+export default WhatIsLinkedinSkillAssessments;

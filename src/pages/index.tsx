@@ -3,8 +3,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import db from "../assets/data.json";
-import Input from "../components/atoms/Input";
-import Image from "next/image";
+// import Input from "../components/atoms/Input";
+// import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -28,16 +28,14 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center">
             <button
-              className="
-                px-8 py-3 m-2 
-                text-lg font-semibold rounded 
-                bg-primary-light text-white
+              className=" 
+                bg-primary-light text-white button
               "
               onClick={() => router.push("/quiz")}
             >
               Get started
             </button>
-            <button className="px-8 py-3 m-2 text-lg font-semibold border rounded bg-blue-300">
+            <button className="bg-blue-300 button" onClick={() => router.push("/what-is-linkedin-skill-assessments")}>
               Learn more
             </button>
           </div>

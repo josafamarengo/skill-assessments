@@ -16,7 +16,7 @@ function Header() {
         <Link href="/" className="mx-auto md:mx-0">
           <QuizLogo />
         </Link>
-        <div className="hidden md:block">
+        <div className="hidden ">
           <Input
             onChange={function (
               event: React.ChangeEvent<HTMLInputElement>

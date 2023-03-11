@@ -7,9 +7,16 @@ interface Props {
 
 function Details({ question, answer }: Props) {
   return (
-    <details className="group p-6 [&_summary::-webkit-details-marker]:hidden">
+    <details
+      className="group p-6 [&_summary::-webkit-details-marker]:hidden"
+      itemScope
+      itemProp="mainEntity"
+      itemType="https://schema.org/Question"
+    >
       <summary className="flex items-center justify-between cursor-pointer">
-        <h2 className="text-lg font-medium text-gray-900">{question}</h2>
+        <h2 className="text-lg font-semibold text-gray-900" itemProp="name">
+          {question}
+        </h2>
         <span className="relative ml-1.5 h-5 w-5 flex-shrink-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +49,14 @@ function Details({ question, answer }: Props) {
           </svg>
         </span>
       </summary>
-      <p className="mt-4 leading-relaxed text-gray-700">{answer}</p>
+      <p
+        className="mt-4 leading-relaxed text-gray-700"
+        itemScope
+        itemProp="acceptedAnswer text"
+        itemType="https://schema.org/Answer"
+      >
+        {answer}
+      </p>
     </details>
   );
 }

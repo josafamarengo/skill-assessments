@@ -40,7 +40,7 @@ function Questions({
         <Link href="/">
           <BiLeftArrowAlt />
         </Link>
-        <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
+        <h3>{`Question ${questionIndex + 1} of ${totalQuestions}`}</h3>
       </header>
       {question.image && (
         <Image
@@ -117,7 +117,7 @@ function Questions({
             disabled={!hasAlternativeSelected}
             className="bg-primary-light py-2 px-4 cursor-pointer text-white"
           >
-            Confirmar
+            Confirm
           </button>
           {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
           {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}

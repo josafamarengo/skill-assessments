@@ -11,7 +11,7 @@ function LoadingWidget() {
         <Lottie
           width="200px"
           height="200px"
-          className="lottie-container basic"
+          className="lottie-container basic text-red-400"
           config={{
             animationData: loadingAnimation,
             loop: true,
