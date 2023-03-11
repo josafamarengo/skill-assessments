@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<QuizProps> = async (
     };
   }
 
-  const response = await fetch(`http://localhost:3000/api/db`);
+  const response = await fetch(`http://josafa.com.br/api/db`);
 
   const quizzes = await response.json();
 
