@@ -1,0 +1,1730 @@
+{
+  "title": "C++",
+  "questions": [
+    {
+      "question": "Q1. What is printed from this code?\n<p><code>cpp\nvector&lt;int&gt; v(22);\nbool b = (v[6]);\nprintf(\"%d\", !b);</code></p>\n",
+      "alternatives": [
+        { "alternative": " False\n", "is_correct": false },
+        { "alternative": " 0\n", "is_correct": false },
+        { "alternative": " 1\n", "is_correct": true },
+        {
+          "alternative": " This code has an error.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q2. Which of the following is a reason why using this line is considered a bad practice? (<em>Alternative</em>: Why is using this line considered a bad practice?)\n<p><code>cpp\nusing namespace std;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " The compiled code is always bigger because of all of the imported symbols.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " If the code uses a function defined in two different libraries with the same prototype but possibly with different implementations, Fthere will be a compilation error due to ambiguity.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It automatically includes all header files in the standard library (cstdint, cstdlib, cstdio, iostream, etc).\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It causes the compiler to enforce the exclusive inclusion of header files belonging to the standard library, generating compilation error when a different header file is included.\n</ul>\n<p><a href=\"https://www.geeksforgeeks.org/using-namespace-std-considered-bad-practice/\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q3. What is the smallest size a variable of the type child_t may occupy in memory?\n<p><code>cpp\ntypedef struct{\n    unsigned int  age    : 4;\n    unsigned char gender : 1;\n    unsigned int  size   : 2;\n}child_t;</code></p>\n",
+      "alternatives": [
+        { "alternative": " 7 bits.\n", "is_correct": true },
+        { "alternative": " 25 bytes.\n", "is_correct": false },
+        { "alternative": " 1 bit.\n", "is_correct": false },
+        {
+          "alternative": " 1 byte.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/bit_field\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q4. Which of the following shows the contents of vector v1 and v2 after running this code?\n<p><code>cpp\nstd::vector&lt;int&gt; v1{1,2,3},v2;\nv2=v1;\nv1.push_back(4);\nv2.push_back(5);</code></p>\n",
+      "alternatives": [
+        { "alternative": " Error\n", "is_correct": false },
+        { "alternative": " v1:{1,2,3,4}; v2:{5};\n", "is_correct": false },
+        {
+          "alternative": " v1:{1,2,3,4,5}; v2:{1,2,3,4,5};\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " v1:{1,2,3,4}; v2:{1,2,3,5};\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q5. Which of the following is a true statement about the difference between pointers and iterators?\n",
+      "alternatives": [
+        {
+          "alternative": " While pointers are variable that hold memory address, iterators are generic functions used to traverse containers. These function allows the programmer to implement read and write code as the container is traversed.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Incrementing an iterator always means access the next element in the container(if any), no matter the container. Incrementing the pointer means pointing to the next element in memory, not always the next element.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Pointers are variables that hold memory address where as iterator are unsigned integers that refers to offsets in arrays.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " All iterator are implemented with pointers so all iterators are pointers but not all pointers are iterators.\n</ul>\n<p><a href=\"https://stackoverflow.com/a/31128162\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q6. What's the storage occupied by u1?\n<p><code>cpp\nunion {\n    uint16_t a;\n    uint32_t b;\n    int8_t c;\n} u1;</code></p>\n",
+      "alternatives": [
+        { "alternative": " 4 bytes\n", "is_correct": true },
+        { "alternative": " 7 bytes\n", "is_correct": false },
+        { "alternative": " 8 bytes\n", "is_correct": false },
+        {
+          "alternative": " 2 bytes\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/union\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q7. Which of the following operators is overloadable?\n",
+      "alternatives": [
+        { "alternative": " <code>?:</code>\n", "is_correct": false },
+        { "alternative": " <code>new</code>\n", "is_correct": true },
+        { "alternative": " <code>::</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>.</code>\n</ul>\n<p><a href=\"https://www.tutorialspoint.com/operators-that-cannot-be-overloaded-in-cplusplus\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q8. Which of the following shows the contents of vector pointed by v1 and v2 after running this code?\n<p><code>cpp\nstd:: vector&lt;int&gt; *v1 = new std::vector&lt;int&gt;({1,2,3});\nstd:: vector&lt;int&gt; *v2;\nv2=v1;\nv1-&gt;push_back(4);\nv2-&gt;push_back(5);</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>*v1:{1,2,3,4}; *v2:{5};</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>*v1:{1,2,3,4,5}; *v2:{1,2,3,4,5};</code>\n",
+          "is_correct": true
+        },
+        { "alternative": " Error\n", "is_correct": false },
+        {
+          "alternative": " <code>*v1:{1,2,3,4}; *v2:{1,2,3,5};</code>\n</ul>\n<p>v1 and v2 point to the same vector.</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q9. Which of the following is not a difference between a class and a struct?\n",
+      "alternatives": [
+        {
+          "alternative": " Because structs are part of the C programming language, there are some complexity between C and C++ structs. This is not the case with classes.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Classes may have member functions; structs are private.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The default access specifier for members of struct is public, whereas for member of class, it is private.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Template type parameters can be declared with classes, but not with the struct keyword.\n</ul>\n<p>Templates can be used with both classes and structs\n<a href=\"https://docs.microsoft.com/en-us/cpp/cpp/struct-cpp?view=msvc-170\">Refernce</a>\n<a href=\"https://www.fluentcpp.com/2017/06/13/the-real-difference-between-struct-class/\">Reference</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q10. Suppose you need to keep a data struct with permission to access some resource based on the days of the week, but you can't use a bool variable for each day. You need to use one bit per day of the week. Which of the following is a correct implementation of a structure with bit fields for this application?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\ntypedef struct {\n    int sunday:1;\n    int monday:1;\n    // more days\n    int friday:1;\n    int saturday:1;\n} weekdays;</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\ntypedef char[7]: weekdays;</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p>```cpp\ntypedef struct {\n    bit sunday:1;\n    bit monday:1;\n    // more days\n    bit friday:1;\n    bit saturday:1;\n} weekdays;</p>\n<p>```</p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\ntypedef struct {\n    bit sunday;\n    bit monday;\n    // more days\n    bit friday;\n    bit saturday;\n} weekdays;</code></p>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/bit_field\">Reference</a> <em>NOTE</em>: Correct syntax is that each variable size is 1 bit. <code>bit</code> is not a type in C++.</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q11. What is an lvalue?\n",
+      "alternatives": [
+        {
+          "alternative": " It's a constant expression, meaning an expression composed of constants and operations.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It's an expression that represents an object with an address.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It's an expression suitable for the left-hand side operand in a binary operation.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It's a location value, meaning a memory address suitable for assigning to a pointer or reference.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q12. What does auto type specifier do in this line of code (since C++11)?\n<p><code>cpp\nauto x = 4000.22;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " It specifies that the type of x will be deduced from the initializer - in this case, double.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It specifies that the type of x is automatic meaning that if can be assigned different types of data throughout the program.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It specifies that x is a variable with automatic storage duration.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It specifies that more memory will be allocated for x in case it needs more space, avoiding loss of data due to overflow.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q13. A class template is a _?\n",
+      "alternatives": [
+        {
+          "alternative": " class written with the generic programming paradigm, specifying behavior in terms of type parameter rather than specific type.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " blank superclass intended for inheritance and polymorphism.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " lass that only consists of member variable, with no constructor, destructor nor member functions.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " skeleton source code for a class where the programmer has to fill in specific parts to define the data types and algorithms used.\n</ul>\n<p><a href=\"https://www.mygreatlearning.com/blog/templates-in-cpp/\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q14. What is the ternary operator equivalent to this code snippet?\n<p><code>cpp\nif(x)\n    y=a;\nelse\n    y=b;</code></p>\n",
+      "alternatives": [
+        { "alternative": " <code>y=a?b:x;</code>\n", "is_correct": false },
+        { "alternative": " <code>y=if(x?a:b);</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>y=(x&amp;a)?a:(x&amp;b)?b:0;</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>y=x?a:b;</code>\n</ul>\n<p><a href=\"https://www.w3schools.com/cpp/cpp_conditions_shorthand.asp\">Reference</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q15. What is the output of this code?\n<p>```cpp</p>\n<h1>include <iostream></h1>\n<p>int main(){\n    int x=10, y=20;\n    std::cout &lt;&lt; \"x = \" &lt;&lt; x++ &lt;&lt; \" and y = \" &lt;&lt; --y &lt;&lt; std::endl;\n    std::cout &lt;&lt; \"x = \" &lt;&lt; x-- &lt;&lt; \" and y = \" &lt;&lt; ++y &lt;&lt; std::endl;\n    return(0);\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>x = 10 and y = 20</code><br />\n<code>x = 11 and y = 19</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>x = 11 and y = 19</code><br />\n<code>x = 10 and y = 20</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>x = 10 and y = 19</code><br />\n<code>x = 11 and y = 20</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>x = 11 and y = 20</code><br />\n<code>x = 10 and y = 19</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q16. What is the meaning of the two parts specified between parentheses in a range-based for loop, separated by a colon?\n",
+      "alternatives": [
+        {
+          "alternative": " The first is a variable declaration that will hold an element in a sequence. The second is the sequence to traverse.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " The first is an iterator, and the second is the increment value to be added to the iterator.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The first is the iterating variable. The second is an <code>std::pair</code> that specifies the range (start and end) in which the variable will iterate.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The first is a container object. The second is an <code>std::pair</code> that specifies the range (start and end) in which the elements will be accessed within the loop.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q17. What is the output of this piece of code?\n<p><code>cpp\nint8_t a=200;\nuint8_t b=100;\nif(a&gt;b)\n    std::cout&lt;&lt;\"greater\";\nelse\n    std::cout&lt;&lt;\"less\";</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " There is no output because there is an exception when comparing an int8_t with a uint8_t.\n",
+          "is_correct": false
+        },
+        { "alternative": " greater\n", "is_correct": false },
+        { "alternative": " less\n", "is_correct": true },
+        {
+          "alternative": " There is no output because there is a compiler error.\n</ul>\n<p>Note: a variant of the question below.</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q18. What is the output of this piece of code?\n<p><code>cpp\nint8_t a=200;\nuint8_t b=100;\nstd::cout&lt;&lt;\"a=\"&lt;&lt;(int)a;\nstd::cout&lt;&lt;\", b=\"&lt;&lt;(int)b;</code></p>\n",
+      "alternatives": [
+        { "alternative": " a=-56, b=100\n", "is_correct": true },
+        { "alternative": " a=-55, b=100\n", "is_correct": false },
+        { "alternative": " a=200, b=-156\n", "is_correct": false },
+        {
+          "alternative": " a=200, b=100\n</ul>\n<p>Note: Implicit conversion from 'int' to 'int8_t' (aka 'signed char') changes value from 200 to -56</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q19. What results from executing this code snippet?\n<p><code>cpp\nint x=5, y=2;\nif(x &amp; y) {\n    /*_part A_*/\n}\nelse {\n    /*_part B_*/\n}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " Part A executes because x==5 (true) and y==2 (true), thus the AND operation evaluates as true.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Part B executes because (x &amp; y) results in 0, or false.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Part A executes because (x &amp; y) results in a nonzero value, or true.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Part B executes because the statement (x &amp; y) is invalid, thus false.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q20. What is a valid definition for the <code>get_length</code> function, which returns the length of a null-terminated string?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nint get_length(char *str) {\n    int count=0;\n    while(str[count++]);\n    return count-1;\n}</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nint get_length(char *str) {\n    int count=0;\n    while(str!=NULL){\n        count++;\n        str++;\n    }\n    return count;\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nint get_length(char *str) {\n    int count=0;\n    while((*str)++)\n        count++;\n    return count;\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nint get_length(char *str) {\n    int count=0;\n    while(str++)\n        count++;\n    return count;\n}</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q21. Which STL class is the best fit for implementing a collection of data that is always ordered so that the pop operation always gets the greatest of the elements? Suppose you are interested only in push and pop operations.\n",
+      "alternatives": [
+        { "alternative": " <code>std::list</code>\n", "is_correct": false },
+        { "alternative": " <code>std::vector</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>std::priority_queue</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>std::map</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q22. What is the meaning of the three sections specified between parentheses in a for loop separated by semicolons?\n",
+      "alternatives": [
+        {
+          "alternative": " The first is the iterating variable name, the second is the number of times to iterate, and the third is the desired increment or decrement (specified with a signed integer).\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The first is the initialization block, the second is the condition to iterate, and the third is the increment block.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " The first is the iterating variable, the second is the container in which it should operate, and the third is an exit condition to abort at any time.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The first is the iterating variable name, the second is the starting value for the iterating variable, and the third is the stop value (the last value plus one).\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q23. What does this code print?\n<p><code>cpp\nint i = 0;\nprintf(\"%d\", i++);\nprintf(\"%d\", i--);\nprintf(\"%d\", ++i);\nprintf(\"%d\", --i);</code></p>\n",
+      "alternatives": [
+        { "alternative": " 0,1,1,0\n", "is_correct": true },
+        { "alternative": " 0,1,0,1\n", "is_correct": false },
+        { "alternative": " 0,0,1,0\n", "is_correct": false },
+        { "alternative": " 1,0,1,0\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q24. What is true about the variable named <code>ptr</code>?\n<p><code>cpp\nvoid *ptr;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " It is a pointer initialized at NULL.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It is a pointer to a void function.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " That declaration causes a compiler error, as pointers must specify a type.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It is a pointer to a value with no specific type, so it may be cast to point to any type.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/pointer\">Reference</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q25. What is the output of this code?\n<p><code>cpp\nint c=3; char d='A';\nstd::printf(\"c is %d and d is %c\",c,d);</code></p>\n",
+      "alternatives": [
+        { "alternative": " c is d and d is c\n", "is_correct": false },
+        { "alternative": " c is A and d is 3\n", "is_correct": false },
+        { "alternative": " c is 3 and d is A\n", "is_correct": true },
+        { "alternative": " c is c and d is d\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q26. What is the output of this code?\n<p><code>cpp\nprintf(\"1/2 = %f\",(float)(1/2));</code></p>\n",
+      "alternatives": [
+        { "alternative": " 1/2 = 0.499999\n", "is_correct": false },
+        { "alternative": " 1/2 = 0\n", "is_correct": false },
+        { "alternative": " 1/2 = 0.000000\n", "is_correct": true },
+        { "alternative": " 1/2 = 0.5\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q27. What is the difference between a public and a private class member?\n",
+      "alternatives": [
+        {
+          "alternative": " Public members are the same as global variables, so every part of the code has access to them. Private members are the same as automatic variables, so only their class has access to them.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Public members are made accessible to any running application. Private members are made accessible only to the application where the object is instantiated.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Public members will be compiled as shared variables in a multithreaded environment. Private members will be compiled as Thread-local variables.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Public members can be accessed by any function. Private members can be accessed only by the same class's member functions and the friends of the class.\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q28. What is the value of <code>x</code> after running this code?\n<p><code>cpp\nint x=10, a=-3;\nx=+a;</code></p>\n",
+      "alternatives": [
+        { "alternative": " 3\n", "is_correct": false },
+        { "alternative": " 7\n", "is_correct": false },
+        { "alternative": " -3\n", "is_correct": true },
+        { "alternative": " 13\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q29. Which statement is true?\n",
+      "alternatives": [
+        {
+          "alternative": " Only classes can have member variables and methods.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C++ supports multiple inheritance.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " C++ supports only single inheritance.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Only structs can inherit.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q30. Consider a pointer to void, named <code>ptr</code>, which has been set to point to a floating point variable <code>g</code>. Which choice is a valid way to dereference <code>ptr</code> to assign its pointed value to a float variable <code>f</code> later in the program?\n<p><code>cpp\nfloat g;\nvoid *ptr=&amp;g;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>float f=*(float)ptr;</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>float f=(float *)ptr;</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>float f=(float)*ptr;</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>float f=*(float *)ptr;</code>\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q31. What is the <code>.*</code> operator and what does it do?\n",
+      "alternatives": [
+        {
+          "alternative": " It is the same as the class member access operator, or arrow operator <code>(-&gt;)</code>, which allows you to access a member of an object through a pointer to the object.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It is the pointer to member operator, and it allows you to access a member of an object through a pointer to that specific class member.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It is the member access with address of operator, which returns the address of a class or struct member.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It is a combination of the member access operator <code>(.)</code> and the dereference operator <code>(*)</code>, so it allows you to access the object that a member pointer points to.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/operator_member_access\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q32. For these declarations, which choice shows four equivalent ways to assign the character \"y\" in the string to a char variable c?\n<p><code>cpp\nchar buff[50] = \"strings as arrays of characters are fun!\"\nchar *str = buff+11;\nchar c;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nc = buff[16];\nc = str[5];\nc = *(buff+16);\nc = *(str+5);</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nc = *(buff[15]);\nc = *(str[4]);\nc = buff+15;\nc = str+4;</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nc = buff[15];\nc = str[4];\nc = *(buff+15);\nc = *(str+4);</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nc = *(buff[16]);\nc = *(str[5]);\nc = buff+16;\nc = str+5;</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q33. Which choice is the correct declaration for the class named Dog, derived from the Animal class?\n<p><code>cpp\nclass Animal{\n    //....\n}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nclass Dog :: public Animal {\n   //....\n};</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nclass Dog : public Animal {\n   //....\n};</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\npublic class Animal :: Dog {\n   //....\n};</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\npublic class Dog extends Animal {\n   //....\n};</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q34. What is the output of this code?\n<p>```cpp</p>\n<h1>include <cstdio></h1>\n<p>using namespace std;</p>\n<p>int main(){\n    char c = 255;\n    if(c&gt;10)\n        printf(\"c = %i, which is greater than 10\", c);\n    else\n        printf(\"c = %i, which is less than 10\", c);\n    return 0;\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " c = -1, which is less than 10\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " c = 255, which is greater than 10\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " c = -1, which is greater than 10\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " c = 255, which is less than 10\n</ul>\n<p>Technically, whether a <code>char</code> is <code>signed</code> or <code>unsigned</code> is implementation-defined;\nin the latter case, the second answer would be correct.\n<a href=\"https://en.cppreference.com/w/cpp/language/types\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q35. How can C++ code call a C function?\n",
+      "alternatives": [
+        {
+          "alternative": " by simply calling the C code\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " there is no way for C++ to call a C function\n",
+          "is_correct": false
+        },
+        { "alternative": " by using extern \"C\"\n", "is_correct": true },
+        {
+          "alternative": " by importing the source C code\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q36. Which choice is <em>not</em> a valid type definition of a structure that contains x and y coordinates as integers, and that can be used exactly as shown for the variable named <code>center</code>?\n<p><code>cpp\ncoord center;\ncenter.x = 5;\ncenter.y = 3;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\ntypedef struct coord {\n    int x;\n    int y;\n};</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\ntypedef struct coord {\n    int x;\n    int y;\n} coord;</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\ntypedef struct {\n    int x;\n    int y;\n} coord;</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p>```cpp\nstruct coord {\n    int x;\n    int y;\n};</p>\n<p>typedef struct coord coord;\n```</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q37. Which choice does <em>not</em> produce the same output as this code snippet? Assume the variable <code>i</code> will not be used anywhere else in the code.\n<p><code>cpp\nfor (i=1;i&lt;10;i++){\n    cout&lt;&lt;i&lt;&lt;endl;\n}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\ni=1;\nwhile(i&lt;10){\n    cout&lt;&lt;++i&lt;&lt;endl;\n}</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nfor (int i:{1,2,3,4,5,6,7,8,9}) {\n    cout&lt;&lt;i&lt;&lt;endl;\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\ni = 1;\ndo {\n    cout&lt;&lt;i++&lt;&lt;endl;\n} while(i&lt;10);</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\ni = 1;\nloop:\n    cout&lt;&lt;i++&lt;&lt;endl;\n    if(i&lt;10) goto loop;</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q38. What does this part of a main.cpp file do?\n<p>```cpp</p>\n<h1>include \"library.h\"</h1>\n<p>```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " It causes the toolchain to compile all the contents of library.h so that its executable code is available when needed by the final application.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It cherry picks library.h for the declarations and definitions of all data and functions used in the remainder of the source file main.cpp, finally replacing the <code>#include</code> directive by those declarations and definitions.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It informs the linker that some functions or data used in the source file main.cpp are contained in library.h, so that they can be called in run time. This is also known as dynamic linking.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It causes the replacement of the <code>#include</code> directive by the entire contents of the source file library.h. This is similar to a Copy-Paste operation of library.h into main.cpp.\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q39. Consider this function declaration of <code>is_even</code>, which takes in an integer and returns true if the argument is an even number and false otherwise. Which declarations are correct for overloaded versions of that function to support floating point numbers and string representations of numbers?\n<p><code>cpp\nbool is_even(int);</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nbool is_even(float f);\nbool is_even(char *str);</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nbool is_even(float f);\nbool is_even(char str);</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nbool is_even_float(float f);\nbool is_even_str(char *str);</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nfloat is_even(float f);\nchar *is_even(char *str);</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q40. Which choice is an include guard for the header file <code>my_library.h</code>?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p>```cpp</p>\n<h1>ifdef MY_LIBRARY_H</h1>\n<h1>define MY_LIBRARY_H</h1>\n<p>// my_library.h content</p>\n<h1>endif /<em> MY_LIBRARY_H </em>/</h1>\n<p>```</p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " B\n</ul>\n<p>```cpp</p>\n<h1>ifndef MY_LIBRARY_H</h1>\n<h1>define MY_LIBRARY_H</h1>\n<p>// my_library.h content</p>\n<h1>endif /<em> MY_LIBRARY_H </em>/</h1>\n<p>```</p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " C\n</ul>\n<p>```cpp</p>\n<h1>ifdef MY_LIBRARY_H</h1>\n<h1>undef MY_LIBRARY_H</h1>\n<p>// my_library.h content</p>\n<h1>endif /<em> MY_LIBRARY_H </em>/</h1>\n<p>```</p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p>```cpp</p>\n<h1>define MY_LIBRARY_H</h1>\n<h1>include MY_LIBRARY_H</h1>\n<p>// my_library.h content</p>\n<h1>undef MY_LIBRARY_H</h1>\n<p>```</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q41. What's wrong with this definition when using a pre-C++11 compiler?\n<p><code>cpp\nstd::vector&lt;std::vector&lt;int&gt;&gt; thematrix;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " There's nothing wrong with it.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " An <code>std::vector</code> cannot contain more <code>std::vector</code> containers as its elements.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The correct syntax should be: <code>std::vector[std::vector[int]] thematrix;</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>&gt;&gt;</code> is parsed as the shift-right operator, and thus results in a compile error.\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q42. What is the statement below equivalent to?\n<p><code>cpp\nsprite-&gt;x</code></p>\n",
+      "alternatives": [
+        { "alternative": " <code>sprite.x</code>\n", "is_correct": false },
+        { "alternative": " <code>sprite.*x</code>\n", "is_correct": false },
+        { "alternative": " <code>(*sprite).x</code>\n", "is_correct": true },
+        {
+          "alternative": " <code>*sprite.x</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q43. Consider a class named <code>complexNumber</code>. Which code will result in an equivalent object?\n<p><code>cpp\ncomplexNumber(float real, float im)\n: real_part(real),\n im_part(im){}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\ncomplexNumber(float real, float im) {\n    this-&gt;real = real_part;\n    this-&gt;im = im_part;\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\ncomplexNumber(float real, float im) {\n    this-&gt;real_part(real);\n    this-&gt;im_part(im);\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\ncomplexNumber(float real, float im) {\n    this-&gt;real_part = real;\n    this-&gt;im_part = im;\n}</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\ncomplexNumber(float real, float im) {\n    this-&gt;real_part = &amp;real;\n    this-&gt;im_part = &amp;im;\n}</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q44. What is the result from executing this code snippet?\n<p>```cpp\nbool x=true, y=false;</p>\n<p>if (~x || y) {\n    /<em>part A</em>/\n} else {\n    /<em>part B</em>/\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " Part A executes because the expression <code>(~x || y)</code> always results in true if <code>y==false</code>.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Part B executes because the statement <code>(~x || y)</code> is invalid, thus false.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Part A executes because <code>~x</code> is not zero, meaning true.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Part B executes because <code>~x</code> is false and <code>y</code> is false, thus the <code>OR</code> operation evaluates as false.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q45. What would be the output of this code?\n<p><code>cpp\nint32_t nums[3]={2,4,3};\nstd::cout &lt;&lt; ( nums[0] &lt;&lt; nums[1] &lt;&lt; nums[2] );</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " The output is the addresses of <code>nums[0]</code>, <code>nums[1]</code>, and <code>nums[2]</code>, in that order, with no spaces.\n",
+          "is_correct": false
+        },
+        { "alternative": " 256\n", "is_correct": true },
+        { "alternative": " <code>0</code>\n", "is_correct": false },
+        { "alternative": " <code>243</code>\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q46. What is the output of this code?\n<p><code>cpp\nfloat values[5]={0.54f, 2.71828f, 3.14159f, 5.499999f, 10.0f};\nfor(auto f:values)\n    printf(\"%i \",(int)(f+0.5f));</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>0.54 2.71828 3.14159 5.499999 10.0</code>\n",
+          "is_correct": false
+        },
+        { "alternative": " <code>1 3 4 6 11</code>\n", "is_correct": false },
+        { "alternative": " <code>0 2 3 5 10</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>1 3 3 5 10</code>\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q47. Which of the following STL classes is the best fit for implementing a phonebook? Suppose each entry contains a name and a phone number, with no duplicates, and you want to have lookup by name.\n",
+      "alternatives": [
+        {
+          "alternative": " <code>std::priority_queue</code>\n",
+          "is_correct": false
+        },
+        { "alternative": " <code>std::list</code>\n", "is_correct": false },
+        { "alternative": " <code>std::vector</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>std::map</code>\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/container/map\">Reference</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q48. What does this program do?\n<p>```cpp</p>\n<h1>include <iostream></h1>\n<h1>include <fstream></h1>\n<p>using namespace std;</p>\n<p>int main(){\n    ifstream file1(\"text1.txt\", ios::binary);\n    ofstream file2(\"text2.txt\", ios::binary);\n    file2 &lt;&lt; file1.rdbuf();\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " It renames text1.txt to text2.txt.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It makes a directory called text2.txt and moves text1.txt there.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It copies the contents of text1.txt into text2.txt - i.e., it makes a copy of text1.txt, named text2.txt.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It appends the contents of text1.txt into text2.txt - i.e., replaces the contents of text2.txt by the concatenation of text2.txt and text1.txt.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/header/fstream\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q49. Which of the following is <em>not</em> a consequence of declaring the member variable <code>count</code> of my_class as static? / Alt.: Which statement is true when declaring the member variable <code>count</code> as static?\n<p><code>cpp\nclass my_class {\n    public: static int count;\n}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " The variable cannot be modified by any part of the code in the same application or thread. However, other threads may modify it.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " The variable exists even when no objects of the class have been defined so it can be modified at any point in the source code.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The variable is allocated only once, regardless of how many objects are instantiated because it is bound to the class itself, not its instances.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " All objects that try to access their count member variable actually refer to the only class-bound static count variable.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/static\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q50. What is the assumed type of a constant represented in the source code as <code>0.44</code>?\n",
+      "alternatives": [
+        { "alternative": " double\n", "is_correct": true },
+        { "alternative": " long float\n", "is_correct": false },
+        { "alternative": " long double\n", "is_correct": false },
+        { "alternative": " float\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q51. What is an appropriate way of removing <code>my_object</code> as shown below?\n<p><code>cpp\nmy_class *my_object = new my_class();</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>delete(my_object);</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>free(my_object);</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The garbage collector will destroy the object eventually.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Exiting the scope will destroy the object.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q52. What is the correct way to call the <code>count</code> member function for the object pointer called <code>grades</code>?\n<p>```cpp\nclass my_array{\n    public:\n        int count();\n};  // ... more members above</p>\n<p>int main(){\n    my_array *grades = new my_array();\n};  // ... more code above\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>grades.count();</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>my_array-&gt;count();</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>grades-&gt;count();</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>my_array.count();</code>\n</ul>\n<p><a href=\"https://en.cppreference.com/w/c/language/operator_member_access\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q53. What would be the output of this code?\n<p><code>cpp\nint i0=4, i1=6, i2=8;\nint&amp; nums[3]={i2,i0,i1};\nstd::cout&lt;&lt;nums[0]&lt;&lt;nums[1]&lt;&lt;nums[2];</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " There is no output. The code causes a compiler error because <code>nums</code> is an array of references, which is illegal.\n",
+          "is_correct": true
+        },
+        { "alternative": " 846\n", "is_correct": false },
+        {
+          "alternative": " The output is the addresses of <code>i2</code>, <code>i0</code>, and <code>i1</code>, in that order, with no spaces.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " 468\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/array\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q54. Does this code cause a compiler error? If so, why, and if not, what is <code>child_t</code>?\n<p><code>cpp\ntypedef struct{\n    unsigned int  age    : 4;\n    unsigned char gender : 1;\n    char                 : 0;\n    unsigned int  size   : 2;\n}child_t;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " Yes, it causes a compiler error because the colon character is not allowed in struct definitions.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " No, and <code>child_t</code> is a type defined as a structure with bit fields. It has 4 bits for age and 1 bit for gender in the first byte, and 2 bits for size in the second byte.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Yes, it causes a compiler error because there is an unnamed field.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Yes, it causes a compiler error because one field is defined as having a size of 0.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/bit_field\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q55. What is this expression equivalent to?\n<p><code>cpp\nA-&gt;B</code></p>\n",
+      "alternatives": [
+        { "alternative": " <code>*(A.B)</code>\n", "is_correct": false },
+        { "alternative": " <code>B=A</code>\n", "is_correct": false },
+        { "alternative": " <code>(*A).B</code>\n", "is_correct": true },
+        {
+          "alternative": " <code>&amp;A.B</code>\n</ul>\n<p>Note: a simpler variant of the question below.</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q56. What is this expression equivalent to?\n<p><code>cpp\nA-&gt;B-&gt;C-&gt;D</code></p>\n",
+      "alternatives": [
+        { "alternative": " <code>A.B.C.D</code>\n", "is_correct": false },
+        { "alternative": " <code>*A.*B.*C.*D</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>&amp;A.&amp;B.&amp;C.&amp;D</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>*(*((*A).B).C).D</code>\n</ul>\n<p><strong>Note:</strong> a more complex variant of the question above.</p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q57. What does this function do?\n<p><code>cpp\nauto buff = new char[50];\nstd::memset(buff,20,50);</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " It declares a memory buffer named buff that starts at address 20 and ends at address 70.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It sets all bits in the array named buffer from its element at index 20 to its element at index 50.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It writes the value 20 in every memory address from buff to buff+49.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It declares a memory buffer named buff that starts at address 20 and ends at address 50.\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/string/byte/memset\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q58. Consider a class named <code>CustomData</code>. Which choice is a correct declaration syntax to overload the postfix <code>++</code> operator as a class member?\n",
+      "alternatives": [
+        {
+          "alternative": " <code>CustomData&amp; operator++();</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>void operator++(CustomData);</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>CustomData operator++(CustomData);</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>CustomData operator++(int);</code>\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/language/operators\">Reference</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q59. You want to sort my_array, declared below. Which choice is the correct call to std::sort, using a lambda expression as the comparison function?\n<p><code>cpp\nstd::array&lt;uint32_t, 50&gt; my_array;</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nstd::sort(my_array.begin(), my_array.end(),\n    [](uint32_t a, uint32_t b) {\n        return a &lt; b;\n    })</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nlambda(uint32_t a, uint32_t b){\n    return a &lt; b;\n}\nstd::sort(my_array.begin(), my_array.end(), lambda);</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nstd::sort(my_array.begin(), my_array.end(),\n    lambda(uint32_t a, uint32_t b){\n        return a &lt; b;\n    })</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nlambda(uint32_t a, uint32_t b){\n    return a &lt; b;\n}\nstd::sort(my_array.begin(), my_array.end(), &amp;lambda);</code></p>\n<p><a href=\"https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q60. Which choice is the most reasonable implementation of the function std::mutex::lock() by using std::mutex::try_lock()?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p><code>cpp\nvoid std::mutex::lock(){\n    while(!this-&gt;try_lock());\n}</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p><code>cpp\nvoid std::mutex::lock(){\n    return (this-&gt;try_lock());\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nvoid std::mutex::lock(){\n    while(1)\n        this-&gt;try_lock();\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nvoid std::mutex::lock(){\n    while(this-&gt;try_lock());\n}</code></p>\n<p>Note: variant of the question below.</p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q61. What is the main difference between these two Functions?\n<p><code>cpp\nstd::mutex::lock()\nstd::mutex::try_lock()</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>lock()</code> has a higher privilege over <code>try_lock()</code>. This means that you have a better chance of acquiring a mutex <code>with lock()</code>.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Both attempt to acquire a lock, but <code>lock()</code> blocks if the mutex is not available, whereas <code>try_lock()</code> returns whether the mutex is available or not.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>lock()</code> enforces preemption, whereas <code>try_lock()</code> suggests preemption.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " If the mutex is not available, <code>try_lock()</code> returns with a corresponding code, whereas <code>lock()</code> snatches the mutex from the thread that currently has it.\n</ul>\n<p>Note: variant of the question above.</p>\n<p><a href=\"https://en.cppreference.com/w/cpp/thread/mutex/try_lock\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q62. What is the purpose of a destructor?\n",
+      "alternatives": [
+        {
+          "alternative": " It allows the programmer to write the necessary code to free the resources acquired by the object prior to deleting the object itself.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " It deletes an object. One example of a destructor is the <code>delete()</code> function.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " It terminates a program. This may be achieved as a regular function call or as an exception.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " There are no destructors in C++.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q63. What is one benefit of declaring the parameter as a <code>const</code> reference instead of declaring it as a regular object?\n<p><code>cpp\nint calculateMedian(const my_array&amp; a)</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " Actually, objects cannot be passed as regular variables, because they require a constructor call. Therefore, a <code>const</code> reference is the only way to pass class instances to functions.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " There are no benefits because a reference and an object are treated as the same thing.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The <code>const</code> qualifier forbids the code to modify the argument, so the programmer can rest assured that the source object will remain unchanged. / Alt.: The argument is passed as a reference, so if the passed my_array object is large, the program will require less time and memory.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " The argument is passed as a reference, so the Function receives a copy that can be modified without affecting the original variable.\n</ul>\n<p><a href=\"https://stackoverflow.com/a/2627179/10773894\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q64. What is an include guard?\n",
+      "alternatives": [
+        {
+          "alternative": " a preprocessor directive that prevents inconsistent behaviors in lines that contain the #ifdef, #ifndef, or #elif directives\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " a compiler option that prevents the user code from including additional libraries\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " a preprocessor statement that prevents a source file from being included more than once in a project\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " a library that adds safety features such as mutexes, watchdog timers, and assertions to the project\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q65. What would be the correct declaration of a default constructor for a class named Sprite?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n  <code>cpp\n  public: Sprite();</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n  <code>cpp\n  private: void Sprite();</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n  <code>cpp\n  public: void Sprite();</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n  <code>cpp\n  private: Sprite();</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q66. What is the purpose of this line in a header file?\n<p>```cpp</p>\n<h1>pragma once</h1>\n<p>```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " to restrict the use of its contents to only one source file\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " to tell the compiler that only one variable can be instantiated from the classes or types contained in this header file\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " to help the compiler finish faster by assuring that only one compiler pass is neccessary for the code included in this header file\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " to make the compiler parse that header file only once, even if it is included multiple times in the source\n</ul>\n<p><a href=\"https://en.cppreference.com/w/cpp/preprocessor/impl\">reference here</a></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q67. What is a variable of type double?\n",
+      "alternatives": [
+        { "alternative": " a 2-tuple\n", "is_correct": false },
+        { "alternative": " an integer number\n", "is_correct": false },
+        { "alternative": " a floating point number\n", "is_correct": true },
+        {
+          "alternative": " a string with more than 255 characters\n</ul>\n<p><a href=\"https://www.educba.com/c-plus-plus-double/\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q68. Other than shifting bits to the left, what is the &lt;&lt; operator used for ?\n",
+      "alternatives": [
+        {
+          "alternative": " shifting characters to the left in a string.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " inserting characters into an output stream like std::cout.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " comparing floating point numbers as less-than.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " assigning a variable to a reference.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q69. Which choice is a reason to specify the type of a pointer instead of using <code>void *</code>, which works as a pointer to any type?\n",
+      "alternatives": [
+        {
+          "alternative": " The compiler needs the data type to make sure that the pointer is not going to be used on illegal non-pointable types such as functions, labels, pointers, and reference.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>void *</code> does not work for any type. The language does not allow assigning anything other than <code>void</code> to a pointer to <code>void *</code>.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The compiler needs the data type to know how much memory to allocate for the pointer, because different data types require different pointer lengths.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Yes, it causes a compiler error because one field is defined as having a size of 0.\n</ul>\n<p><a href=\"https://stackoverflow.com/questions/9802585/why-is-the-data-type-needed-in-pointer-declarations\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q70. What is wrong with this piece of code?\n<p>```cpp</p>\n<h1>include <iostream></h1>\n<p>char str[20];\nint main(){\n    std::cout &lt;&lt; \"What's your name? \";\n    str &lt;&lt; std::cin\n    std::cout &lt;&lt; \"Hello, \" &lt;&lt; str;\n    return 0;\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " The main function is supposed to have a void return type.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>std::cin</code> and <code>std::cout</code> are invalid. The correct names for the character input and output streams are <code>cin</code> and <code>cout</code>.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The address of <code>str</code> is supposed to be used. That is <code>&amp;str</code> instead of <code>str</code>.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The input operator flow is inverted. it should start from <code>std::cin</code> and then flow (&gt;&gt;) into <code>str</code>.\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q71. When placed in a valid execution context, which statement will dynamically allocate memory from the heap for an integer of value 11?\n",
+      "alternatives": [
+        {
+          "alternative": " <code>int anInt = new int(11);</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>int* anInt = new int[11];</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>int anInt = new int[11];</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>int* anInt = new int(11);</code>\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q72. Which choice best describes the type <code>long</code>?\n",
+      "alternatives": [
+        {
+          "alternative": " an integer number of at least 32 bits\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " a string with more than 255 characters\n",
+          "is_correct": false
+        },
+        { "alternative": " a pointer\n", "is_correct": false },
+        {
+          "alternative": " a 64-bit floating point number\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q73. Which of the following types has the closest functionality to a class?\n",
+      "alternatives": [
+        { "alternative": " <code>struct</code>\n", "is_correct": true },
+        { "alternative": " <code>union</code>\n", "is_correct": false },
+        { "alternative": " <code>enum</code>\n", "is_correct": false },
+        {
+          "alternative": " <code>namespace</code>\n</ul>\n<p><a href=\"https://en.cppreference.com/w/c/language/struct\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q74. Given these records in a map, how will you update the value for the key \"Sinead\" to 22?\n<p><img alt=\"image\" src=\"images/Q79.png?raw=png\" /></p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>marks[\"Sinead\"] = 22</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>marks[\"Sinead\"].22</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>marks[\"Sinead\"] -&gt; 22</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>marks[\"Sinead\"].value = 22</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q75. Why can the std::sort receive a function object as one of its parameters?\n",
+      "alternatives": [
+        {
+          "alternative": " <code>The std::sort function is a template. The programmer is free to enter the sorting algorithm in a function object as an argument.</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>Actually, std::sort takes only one argument, which is the container to be sorted.</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>std::sort operates on a template container. The compiler does not know how to relationally compare the values it contains, so a function must be provided to do the comparison.</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>std::sort will use the parameter function as an error handler. The function will be called if an error occurs.</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q76. What will happen when you execute this code snippet?\n<p>```</p>\n<h1>include <iostream></h1>\n<p>int main() {\nfloat a = 5.51;\nint b = static_cast<int>(a);\nstd::cout &lt;&lt; b;\n}\n```</p>\n",
+      "alternatives": [
+        {
+          "alternative": " <code>6 will be printed on standard output, with no compilation warnings generated.</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>5 will be printed on standard output, with no compilation warnings generated.</code>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " <code>6 will be printed on standard output, with compilation warnings generated.</code>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " <code>5 will be printed on standard output, with compilation warnings generated.</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q77. Which access specifier does not allow class members to be accessed from outside the class, but allows them to be accessed by derived classes?\n",
+      "alternatives": [
+        { "alternative": " guarded\n", "is_correct": false },
+        { "alternative": " protected\n", "is_correct": true },
+        { "alternative": " public\n", "is_correct": false },
+        { "alternative": " private\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q78. The default executable generation on UNIX for a C++ program is _\n",
+      "alternatives": [
+        { "alternative": " a.exe\n", "is_correct": false },
+        { "alternative": " a\n", "is_correct": false },
+        { "alternative": " a.out\n", "is_correct": true },
+        { "alternative": " out.a\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q79. What will be the output of the following program?\n<p>```cpp</p>\n<h1>include <iostream></h1>\n<p>using namespace std;\nint main() {\n  int a=1;\n  cout&lt;&lt;(a++)*(++a)&lt;&lt;endl;\n  return 0;\n}\n```</p>\n",
+      "alternatives": [
+        { "alternative": " 1\n", "is_correct": false },
+        { "alternative": " 2\n", "is_correct": false },
+        { "alternative": " 3\n", "is_correct": true },
+        { "alternative": " 6\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q80. What does \"c\" stands for in cout and cin?\n",
+      "alternatives": [
+        { "alternative": " compiler\n", "is_correct": false },
+        { "alternative": " console\n", "is_correct": false },
+        { "alternative": " character\n", "is_correct": true },
+        { "alternative": " standard namespace\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q81. What is the use of tellp()?\n",
+      "alternatives": [
+        {
+          "alternative": " Current Input Pointer position\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Current Output Pointer position\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " Last Input Pointer position\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Last Output Pointer position\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q82. What is callback function?\n",
+      "alternatives": [
+        { "alternative": " Pointer for a pointer\n", "is_correct": false },
+        { "alternative": " Pointer for a function\n", "is_correct": true },
+        { "alternative": " function for a pointer\n", "is_correct": false },
+        { "alternative": " function for a class\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q83. What is a correct syntax to output \"Hello World\" in C++?\n",
+      "alternatives": [
+        {
+          "alternative": " cout &lt;&lt; \"Hello World\";\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " System.out.println(\"Hello World\");\n",
+          "is_correct": false
+        },
+        { "alternative": " print(\"Hello World\");\n", "is_correct": false },
+        {
+          "alternative": " Console.WriteLine(\"Hello World\");\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q84. How many categories of iterators are there in C++ ?\n",
+      "alternatives": [
+        { "alternative": " 4\n", "is_correct": false },
+        { "alternative": " 3\n", "is_correct": false },
+        { "alternative": " 7\n", "is_correct": false },
+        { "alternative": " 5\n</ul>\n", "is_correct": true }
+      ]
+    },
+    {
+      "question": "Q85. What is the meaning of base class in C++ ?\n",
+      "alternatives": [
+        { "alternative": " It inherit other class\n", "is_correct": false },
+        { "alternative": " It has a pointer variable\n", "is_correct": false },
+        {
+          "alternative": " It is the first class declared\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Another class got inherit from this class\n</ul>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q86. Size of C++ objects are expressed in terms of multiples of the size of a <strong> and the size of a char is </strong>.\n",
+      "alternatives": [
+        { "alternative": " char, 4\n", "is_correct": false },
+        { "alternative": " float, 8\n", "is_correct": false },
+        { "alternative": " int, 1\n", "is_correct": false },
+        { "alternative": " char, 1\n</ul>\n", "is_correct": true }
+      ]
+    },
+    {
+      "question": "Q87. Implementation dependent aspects about an implementation can be found in\n",
+      "alternatives": [
+        {
+          "alternative": " <code>&lt;numeric&gt;</code>\n",
+          "is_correct": false
+        },
+        { "alternative": " <code>&lt;limit&gt;</code>\n", "is_correct": false },
+        { "alternative": " <code>&lt;limits&gt;</code>\n", "is_correct": true },
+        {
+          "alternative": " <code>&lt;implementation&gt;</code>\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q88. What is a default constructor?\n",
+      "alternatives": [
+        {
+          "alternative": " a constructor that can be used with no arguments\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " a contructor that does not have a return value\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " a constructor that is used by multiple classes\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " a constructor that initializes all members of a class\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q89. When protecting a header file, why would you use '#pragma once' instead of 'include' guard?\n",
+      "alternatives": [
+        {
+          "alternative": " There is no reason to choose because they serve different purposes\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " An include guard uses a macro to achieve single inclusion, but the compiler cannot prevent the programmer from defining that macro elsewhere, which would result in no inclusion at all\n      defining that macro elsewhere, which would result in no inclusion at all\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " '#pragma once' guarantees that the header code will never be changed because it is enforced by the compiler\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " Include guards refer to the header file in the file system, not to the code, so they are not helpful if the header file exists\n      more than once in a project. This is not a problem with '#pragma once'\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q90. Which of the following statement is valid?\n",
+      "alternatives": [
+        {
+          "alternative": " We can create new c++ operator.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " We can change the precedence of the c++ operator.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " We can not change the operator templates.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " We can change the associativity of the c++ operators.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q91. Which of the followings is/are automatically added to every class, if we do not write our own?\n",
+      "alternatives": [
+        { "alternative": " Copy Constructor\n", "is_correct": false },
+        { "alternative": " Assignment Operator\n", "is_correct": false },
+        {
+          "alternative": " A constructor without any parameter\n",
+          "is_correct": false
+        },
+        { "alternative": " All of the above\n</ul>\n", "is_correct": true }
+      ]
+    },
+    {
+      "question": "Q92. The if-else statement can be replaced by which operator ?\n",
+      "alternatives": [
+        { "alternative": " certain structure\n", "is_correct": false },
+        { "alternative": " choosing structure\n", "is_correct": false },
+        { "alternative": " selective structure\n", "is_correct": true },
+        { "alternative": " None of the Above\n</ul>\n", "is_correct": false }
+      ]
+    },
+    {
+      "question": "Q93. Which choice would be a recursive solution to the factorial n! problem?\n",
+      "alternatives": [
+        {
+          "alternative": "\n</ul>\n<p><code>cpp\nvoid fact(int n) {\n    if (n &lt;= 0)\n        return 0;\n    else\n        return 1;\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": "\n</ul>\n<p><code>cpp\nint fact(int n) {\n    if (n &lt;= 0)\n        return 1;\n    else\n        return (fact(n) * (n-1));\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": "\n</ul>\n<p><code>cpp\nint fact(int n) {\n    if (n &gt;= 0)\n        return 1;\n    else\n        return (fact(n-1) * n);\n}</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": "\n</ul>\n<p><code>cpp\nint fact(int n) {\n    if (n &lt;= 0)\n        return 1;\n    else\n        return (fact(n-1) * n);\n}</code></p>\n",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "question": "Q94. A class destructor can be called when a variety of situations occur. Which choice is not one of those situations?\n",
+      "alternatives": [
+        {
+          "alternative": " The program is terminated. This calls the destructor of static duration objects.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The delete () function is called for an object pointer assigned with the new operator.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " The garbage collector detects that an object is no longer going to be used.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " An automatic storage duration object goes out of scope.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q95. You are designing a foreign exchange payments system in C++, You need to model a transaction of a currency that has an integer as its quantity and a float as its price. You then want to declare an actual object of this type. How will vou achieve this?\n",
+      "alternatives": [
+        {
+          "alternative": " A\n</ul>\n<p>```cpp\nstruct currencyDeal {\n    float price;\n    int quantity;\n};</p>\n<p>currencyDeal firstDeal;\n```</p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " B\n</ul>\n<p>```cpp\nunion currencyDeal {\n    float price;\n    int quantity;\n};</p>\n<p>currencyDeal firstDeal;\n```</p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nstruct currencyDeal {\n    float price;\n    int quantity;\n};</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " D\n</ul>\n<p><code>cpp\nunion currencyDeal {\n    float price;\n    int quantity;\n};</code></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q96. What will happen if you attempt to call this function with checkConcatThreshold(\"a\");?\n<p><code>cpp\nint checkConcatThreshold(string a, string b) {\n    return (a + b).length () &gt; 120;\n}</code></p>\n",
+      "alternatives": [
+        {
+          "alternative": " A compilation warning will occur and the second argument will be given a default value of b.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " A compilation warning will occur and the second argument will be given a default value of empty string.\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " A compilation error will occur.\n",
+          "is_correct": true
+        },
+        {
+          "alternative": " No compilation errors will occur and no compilation warnings will occur.\n</ul>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q97. You need to define a C++ lambda function. You want the function to have access to only the variables that are local to it. The function should receive a single parameter, a name, and construct a simple greeting. How will you achieve this?\n",
+      "alternatives": [
+        {
+          "alternative": "[] A\n</ul>\n<p><code>cpp\nauto myVeryFirstLambda = [=] (string name) {\n        return \"Hello \" + name + \"!\";\n    };</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": "[] B\n</ul>\n<p><code>cpp\nmyVeryFirstLambda = [&amp;] (string name) {\n        return \"Hello \" + name + \"!\";\n    };</code></p>\n<ul>\n",
+          "is_correct": false
+        },
+        {
+          "alternative": " C\n</ul>\n<p><code>cpp\nauto myVeryFirstLambda = [] (string name) {\n        return \"Hello \" + name + \"!\";\n    };</code></p>\n<ul>\n",
+          "is_correct": true
+        },
+        {
+          "alternative": "[] D\n</ul>\n<p><code>cpp\nmyVeryFirstLambda = [] (string name) {\n        return \"Hello \" + name + \"!\";\n    };</code></p>\n<p><a href=\"https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160\">Reference</a></p>\n",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Q98. What is the value of X after running this code?\n<p><code>cpp\nint x=10, a=-3;\nX+=a;</code></p>\n",
+      "alternatives": [
+        { "alternative": " -3\n", "is_correct": false },
+        { "alternative": " 7\n", "is_correct": true },
+        { "alternative": " 13\n", "is_correct": false },
+        {
+          "alternative": " 3\n</ul>\n<p><strong>Explanation :</strong> <code>+=</code> means increasing value. So <code>x += a</code> is equivalent to <code>x = x + a</code></p>",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}
