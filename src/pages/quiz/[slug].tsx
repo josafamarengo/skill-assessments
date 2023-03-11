@@ -18,6 +18,7 @@ interface Alternative {
   is_correct: boolean;
 }
 
+const BASE_URL = process.env.BASE_URL;
 
 export default function QuizPage({ questions }: QuizProps) {
   return <QuizScreen questions={questions} />;
@@ -33,7 +34,7 @@ export const getServerSideProps: GetServerSideProps<QuizProps> = async (
     };
   }
 
-  const response = await fetch(`http://josafa.com.br/api/db`);
+  const response = await fetch(`${BASE_URL}/api/db`);
 
   const quizzes = await response.json();
 
