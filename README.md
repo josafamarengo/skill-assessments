@@ -44,7 +44,8 @@
 
 ## About The Project
 
-![skill-assessments Screen Shot](./src/assets/img/screenshots/screenshot.jpg)
+![skill-assessments Home Screen Shot](./src/assets/img/screenshots/home.png)
+![skill-assessments Quiz Screen Shot](./src/assets/img/screenshots/quiz.png)![skill-assessments Question Screen Shot](./src/assets/img/screenshots/question.png)
 
 I had the idea to build this project because I was planning to do some Linkedin skills assessments, but I wanted to test my knowledge first.
 
