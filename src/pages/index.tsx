@@ -17,8 +17,8 @@ export default function Home() {
           content="Boost Your Professional Profile with LinkedIn Skill Assessments: Take the Test Now!"
         />
       </Head>
-      <section className="w-screen h-screen bg-secondary-light flex flex-col justify-center items-center">
-        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+      <section className="w-screen h-[calc(100vh-4rem)] bg-secondary-light flex flex-col justify-center items-center">
+        <div className="container mx-auto flex flex-col items-center px-4  text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
           <h1 className="text-4xl font-bold leading-none sm:text-5xl">
             Test your knowledge for{" "}
             <span className="text-primary-light">Linkedin</span> skill

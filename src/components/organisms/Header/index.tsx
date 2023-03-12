@@ -7,7 +7,7 @@ import QuizLogo from "../../atoms/QuizLogo";
 function Header() { 
   return (
     <header
-      className="fixed top-0 left-0
+      className="
         w-full h-16 flex justify-center bg-secondary-light z-50 
         shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)]
       "

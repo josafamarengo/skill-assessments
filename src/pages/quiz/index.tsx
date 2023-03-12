@@ -47,7 +47,7 @@ function Quiz() {
   }, []);
 
   return (
-    <section className="w-screen min-h-screen flex flex-col justify-center items-center pt-16">
+    <section className="w-screen min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center">
       <Head>
         <title>Quiz</title>
       </Head>
