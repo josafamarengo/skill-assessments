@@ -3,6 +3,7 @@ import Loading from "@/components/molecules/Loading";
 import Result from "@/components/molecules/Result";
 import Link from "next/link";
 import { BiLeftArrowAlt } from "react-icons/bi";
+import Head from "next/head";
 
 const screenStates = {
   QUIZ: "QUIZ",
@@ -34,6 +35,8 @@ export default function QuizPage({ questions }: QuizPageProps) {
 
   const currentQuestion = questions[currentQuestionIndex];
   const hasAlternativeSelected = selectedAlternative !== undefined;
+
+  const thisPath = window.location.pathname.replace("/quiz/", "").replaceAll("%20", " ");
 
   const handleAnswerButtonClick = (isCorrect: boolean, index: number) => {
     setSelectedAlternative(index);
@@ -84,6 +87,9 @@ export default function QuizPage({ questions }: QuizPageProps) {
 
   return (
     <div>
+      <Head>
+        <title>{thisPath}</title>
+      </Head>
       <div
         className="
           w-full min-h-screen flex flex-col justify-center items-center max-w-xl pt-8

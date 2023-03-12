@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import fetch from "isomorphic-unfetch";
 
 import Loading from "@/components/molecules/Loading";
+import Head from "next/head";
 
 const screenStates = {
   PAGE: "PAGE",
@@ -47,6 +48,9 @@ function Quiz() {
 
   return (
     <section className="w-screen min-h-screen flex flex-col justify-center items-center pt-16">
+      <Head>
+        <title>Quiz</title>
+      </Head>
       {screenState === screenStates.LOADING && <Loading />}
       {screenState === screenStates.PAGE && (
         <div className="bg-secondary-light shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] rounded-lg max-w-screen-5xl px-4 py-8 mt-12 mb-24 sm:px-6 lg:px-8">

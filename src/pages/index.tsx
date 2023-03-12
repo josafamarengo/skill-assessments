@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
-import db from "../assets/data.json";
 // import Input from "../components/atoms/Input";
 // import Image from "next/image";
 
@@ -13,7 +11,11 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>{db.title}</title>
+        <title>Skill Quiz | Test your knowledge</title>
+        <meta
+          name="description"
+          content="Boost Your Professional Profile with LinkedIn Skill Assessments: Take the Test Now!"
+        />
       </Head>
       <section className="w-screen h-screen bg-secondary-light flex flex-col justify-center items-center">
         <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
@@ -35,7 +37,10 @@ export default function Home() {
             >
               Get started
             </button>
-            <button className="bg-blue-300 button" onClick={() => router.push("/what-is-linkedin-skill-assessments")}>
+            <button
+              className="bg-blue-300 button"
+              onClick={() => router.push("/what-is-linkedin-skill-assessments")}
+            >
               Learn more
             </button>
           </div>
