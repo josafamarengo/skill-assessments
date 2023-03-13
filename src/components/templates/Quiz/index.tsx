@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import  { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
-import { BiLeftArrowAlt } from "react-icons/bi";
 import Loading from "@/components/molecules/Loading";
 import Result from "@/components/molecules/Result";
 
@@ -30,7 +28,7 @@ interface QuizPageProps {
 export default function QuizPage({ questions }: QuizPageProps) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [submited, setSubmited] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAlternative, setSelectedAlternative] = useState<
@@ -44,17 +42,14 @@ export default function QuizPage({ questions }: QuizPageProps) {
   const currentQuestion = questions[currentQuestionIndex];
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
-  const handleAnswerButtonClick = (isCorrect: boolean, index: number) => {
-    setSelectedAlternative(index);
+  const handleSubmit = () => {
+    setSubmitted(true);
 
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-  };
+    const isCorrect =
+      currentQuestion.alternatives[selectedAlternative!].is_correct;
 
-  const handleNextButtonClick = () => {
-    setSubmited(true);
     const nextQuestionIndex = currentQuestionIndex + 1;
+
     if (nextQuestionIndex < questions.length) {
       setTimeout(() => {
         setCurrentQuestionIndex(nextQuestionIndex);
@@ -64,9 +59,17 @@ export default function QuizPage({ questions }: QuizPageProps) {
         setShowScore(true);
       }, 1 * 1000);
     }
+
+    if (isCorrect) {
+      setTimeout(() => {
+        setScore(score + 1);
+      }, 1 * 1000);
+    }
+
     setSelectedAlternative(undefined);
+
     setTimeout(() => {
-      setSubmited(false);
+      setSubmitted(false);
     }, 1 * 1000);
   };
 
@@ -91,26 +94,35 @@ export default function QuizPage({ questions }: QuizPageProps) {
   }, [showScore]);
 
   return (
-    <div>
+    <div className="bg-bg-light w-screen">
       <Head>
         <title>{thisPath}</title>
       </Head>
       <div
         className="
-          w-full min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center max-w-xl
+          w-full min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center max-w-xl mx-auto
         "
       >
         {screenState === screenStates.QUIZ && (
           <div className="flex flex-col justify-center items-center min-h-screen -translate-y-12">
-            <header className="flex items-center py-5 px-8">
-              <Link href="/">
-                <BiLeftArrowAlt />
-              </Link>
+            <header className="w-full flex justify-between items-center py-5 px-8 font-semibold">
               <h3>{`Question ${currentQuestionIndex + 1} of ${
                 questions.length
               }`}</h3>
+              <p
+                className={`
+                ${(score / currentQuestionIndex) * 100 > 70 && "bg-green-300"}
+                p-2 rounded-lg
+              `}
+              >
+                {score} {score === 1 ? "correct" : "corrects"} -{" "}
+                {score > 0
+                  ? ((score / currentQuestionIndex) * 100).toFixed()
+                  : 0}{" "}
+                %
+              </p>
             </header>
-            <div className="bg-secondary-light max-w-[90%] p-4 rounded shadow-md">
+            <div className="max-w-[90%] p-4 rounded shadow-lg bg-secondary-light border border-gray-200">
               <h2
                 className="text-lg font-bold mb-4"
                 dangerouslySetInnerHTML={{ __html: currentQuestion.question }}
@@ -119,22 +131,13 @@ export default function QuizPage({ questions }: QuizPageProps) {
                 {currentQuestion.alternatives.map((alternative, index) => (
                   <li key={index}>
                     <button
-                      disabled={submited}
+                      disabled={submitted}
                       className={`
-                        px-4 py-2 rounded bg-gray-200 mr-4 w-full
-                        ${
-                          selectedAlternative === index &&
-                          "bg-yellow-700 text-white"
-                        }
-                        ${
-                          submited &&
-                          alternative.is_correct &&
-                          "bg-green-700 text-white"
-                        }
+                        px-4 py-2 rounded-lg border-2 border-gray-400 mr-4 w-full
+                        ${selectedAlternative === index && "bg-gray-200"}
+                        ${submitted && alternative.is_correct && "bg-green-400"}
                       `}
-                      onClick={() =>
-                        handleAnswerButtonClick(alternative.is_correct, index)
-                      }
+                      onClick={() => setSelectedAlternative(index)}
                       dangerouslySetInnerHTML={{
                         __html: alternative.alternative,
                       }}
@@ -146,7 +149,7 @@ export default function QuizPage({ questions }: QuizPageProps) {
                 <button
                   type="submit"
                   disabled={!hasAlternativeSelected}
-                  onClick={handleNextButtonClick}
+                  onClick={handleSubmit}
                   className="bg-primary-light py-2 px-4 rounded-lg cursor-pointer text-white"
                 >
                   Confirm

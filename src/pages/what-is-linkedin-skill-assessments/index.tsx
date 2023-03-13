@@ -9,7 +9,7 @@ function WhatIsLinkedinSkillAssessments() {
   const router = useRouter();
 
   return (
-    <div className="mx-auto bg-secondary-light rounded-lg shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] max-w-2xl px-4 py-6 my-24">
+    <div className="mx-auto max-w-4xl px-4 py-6 md:py-16">
       <Head>
         <title>What is LinkedIn Skill Assessments?</title>
         <meta
@@ -17,7 +17,7 @@ function WhatIsLinkedinSkillAssessments() {
           content="LinkedIn Skill Assessments are a tool provided by LinkedIn to assess the skills and knowledge of professionals in various fields. They are designed to help individuals showcase their expertise and proficiency to potential employers, colleagues, and clients."
         />
       </Head>
-      <article className="max-w-xl mx-auto">
+      <article className="px-4">
         <h1 className="text-3xl font-bold mb-4">
           What is LinkedIn Skill Assessments?
         </h1>
@@ -68,14 +68,17 @@ function WhatIsLinkedinSkillAssessments() {
       </article>
 
       <div className="w-full flex justify-center py-4">
-        <button className="bg-primary-light text-white font-bold py-2 px-4 rounded" onClick={() => router.push("/quiz")}>
+        <button
+          className="bg-primary-light text-white font-bold py-2 px-4 rounded"
+          onClick={() => router.push("/quiz")}
+        >
           Take Skill Assessment
         </button>
       </div>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">FAQs</h2>
       <section
-        className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl"
+        className="bg-white border border-gray-200 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] divide-y divide-gray-200 rounded-xl"
         itemScope
         itemType="https://schema.org/FAQPage"
       >

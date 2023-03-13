@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-bg-light text-icon-focus-light flex flex-col items-center min-h-screen min-w-full font-sans;
+    @apply bg-secondary-light text-icon-focus-light flex flex-col items-center min-h-screen min-w-full font-sans overflow-x-hidden;
   }
 
   code {
