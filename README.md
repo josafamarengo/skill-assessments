@@ -206,6 +206,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <div align="center">
-  <sub>Built with ❤︎ by <a href="https://github.com/josafamarengo">Josafá Marengo</a>
+  <sub>Built with ❤︎ by <a href="https://josafa.com.br">Josafá Marengo</a>
 </div>
 
