@@ -262,7 +262,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 [stars-url]: https://github.com/josafamarengo/skill-assessments/stargazers
 [issues-shield]: https://img.shields.io/github/issues/josafamarengo/skill-assessments.svg?style=flat
 [issues-url]: https://github.com/josafamarengo/skill-assessments/issues
-[license-shield]: https://img.shields.io/github/license/josafamarengo/skill-assessments.svg?style=flat
+[license-shield]: https://img.shields.io/badge/License-GPL%20v3-blue.svg
 [license-url]: https://github.com/josafamarengo/skill-assessments/blob/main/LICENSE.md
 
 <!-- SOCIAL LINKS -->
