@@ -6,7 +6,7 @@
 ![lighthouse_performance](https://user-images.githubusercontent.com/88048411/225086021-d6aa94a4-b502-4558-b0b4-aa0b54cf1e3c.svg)
 ![lighthouse_seo](https://user-images.githubusercontent.com/88048411/225086026-ce237e67-5653-41b1-8adb-84ab32dd53d3.svg)
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![License][license-shield]][license-url]
 
 
   <br />
