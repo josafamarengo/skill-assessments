@@ -1,5 +1,18 @@
 <a name="readme-top"></a>
 
+[![LinkedIn][linkedin-shield]][linkedin-url]
+![lighthouse_accessibility](https://user-images.githubusercontent.com/88048411/225086013-43ed6dd1-be6d-4255-bac5-fdbe222758af.svg)
+![lighthouse_best-practices](https://user-images.githubusercontent.com/88048411/225086019-1d6ec29f-5526-45bc-bbf9-1f934ab4aa83.svg)
+![lighthouse_performance](https://user-images.githubusercontent.com/88048411/225086021-d6aa94a4-b502-4558-b0b4-aa0b54cf1e3c.svg)
+![lighthouse_seo](https://user-images.githubusercontent.com/88048411/225086026-ce237e67-5653-41b1-8adb-84ab32dd53d3.svg)
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+
   <br />
 <div align="center">
   <img src="https://img.icons8.com/3d-fluency/94/null/test-passed.png"/>
@@ -163,7 +176,7 @@ yarn
 
 See the [open issues](https://github.com/josafamarengo/skill-assessments/issues) for a list of proposed features (and known issues).
 
-- [ ] Use Matter.js to create a animation 
+- [ ] Use Matter.js to create an animation 
 - [ ] Add Authentication
 - [ ] Add a profile page
 
@@ -173,13 +186,20 @@ Any contributions you make are **greatly appreciated**. Before you get started, 
 
 ### How to Contribute
 
-1. Fork this repository to your own GitHub account.
-2. Follow the steps on [Getting Started Section](#getting-started).
-3. Create a new branch for your feature or bug fix.
-4. Make your changes and ensure they pass the tests by running npm test or yarn test.
-5. Commit your changes with clear and concise commit messages.
-6. Push your changes to your forked repository.
-7. Submit a pull request to our repository with a description of your changes.
+<ol>
+  <li>Fork this repository to your own GitHub account.</li>
+  <li>Follow the steps on <a href="#getting-started">Getting Started Section</a>.</li>
+  <li>Create a new branch for your:</li>
+    <ol>
+      <li>Feature <code>git checkout -b feature/your-feature</code></li>
+      <li>Bug fix <code>git checkout -b bugfix/bug</code></li>
+      <li>Docs, improvments, refactoring, optmizing,... <code>git checkout -b requirement/your-requirement</code>.</li>
+    </ol>
+  <!-- <li>Make your changes and ensure they pass the tests by running <code>npm test</code> or <code>yarn test</code>.</li> -->
+  <li>Commit your changes with clear and concise commit messages following the <a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines">Angular commit convention</a></li>
+  <li>Push your changes to your forked repository.</li>
+  <li>Submit a pull request to our repository with a description of your changes.</li>
+</ol>
 
 Please make sure to write clear commit messages and to follow our coding conventions. We appreciate your contributions and will review them as soon as possible!
 
@@ -234,14 +254,25 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [repo-url]: https://github.com/josafamarengo/skill-assessments
 [issues-url]: https://github.com/josafamarengo/skill-assessments/issues
 
+[contributors-shield]: https://img.shields.io/github/contributors/josafamarengo/skill-assessments.svg?style=for-the-badge
+[contributors-url]: https://github.com/josafamarengo/skill-assessments/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/josafamarengo/skill-assessments.svg?style=for-the-badge
+[forks-url]: https://github.com/josafamarengo/skill-assessments/network/members
+[stars-shield]: https://img.shields.io/github/stars/josafamarengo/skill-assessments.svg?style=for-the-badge
+[stars-url]: https://github.com/josafamarengo/skill-assessments/stargazers
+[issues-shield]: https://img.shields.io/github/issues/josafamarengo/skill-assessments.svg?style=for-the-badge
+[issues-url]: https://github.com/josafamarengo/skill-assessments/issues
+[license-shield]: https://img.shields.io/github/license/josafamarengo/skill-assessments.svg?style=for-the-badge
+[license-url]: https://github.com/josafamarengo/skill-assessments/blob/master/LICENSE.txt
+
 <!-- SOCIAL LINKS -->
-[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/josafamarengo
 
-[email-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[email-shield]: https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white
 [email-url]: https://josafa.com.br/#contact
 
-[site-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&logo=Google-chrome&logoColor=white
+[site-shield]: https://img.shields.io/badge/website-000000?style=flat&logo=Google-chrome&logoColor=white
 [site-url]: https://josafa.com.br
 
 
