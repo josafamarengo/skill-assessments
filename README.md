@@ -19,7 +19,7 @@
 
 </div>
 
-## Table of Contents
+## 🔍 Table of Contents
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -42,7 +42,7 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 
-## About The Project
+## ℹ️ About The Project
 
 ![skill-assessments Home Screen Shot](./src/assets/img/screenshots/home.png)
 ![skill-assessments Quiz Screen Shot](./src/assets/img/screenshots/quiz.png)![skill-assessments Question Screen Shot](./src/assets/img/screenshots/question.png)
@@ -113,7 +113,7 @@ From there, I created the front end to use the constant data in the JSON files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Getting Started
+## 🚀 Getting Started
 
 To get a local copy up and running follow these simple steps.
 
@@ -159,7 +159,7 @@ yarn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap
+## 🗺️ Roadmap
 
 See the [open issues](https://github.com/josafamarengo/skill-assessments/issues) for a list of proposed features (and known issues).
 
@@ -167,37 +167,55 @@ See the [open issues](https://github.com/josafamarengo/skill-assessments/issues)
 - [ ] Add Authentication
 - [ ] Add a profile page
 
-## Contributing
+## 👥 Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Any contributions you make are **greatly appreciated**. Before you get started, please take a moment to review our Code of Conduct and Contributing Guidelines.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+### How to Contribute
 
-1. Fork the Project
+1. Fork this repository to your own GitHub account.
+2. Follow the steps on [Getting Started Section](#getting-started).
+3. Create a new branch for your feature or bug fix.
+4. Make your changes and ensure they pass the tests by running npm test or yarn test.
+5. Commit your changes with clear and concise commit messages.
+6. Push your changes to your forked repository.
+7. Submit a pull request to our repository with a description of your changes.
 
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+Please make sure to write clear commit messages and to follow our coding conventions. We appreciate your contributions and will review them as soon as possible!
 
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+### Issue Tracker
 
-5. Open a Pull Request
+If you encounter any bugs or have feature requests, please open an issue on our [Issue Tracker][issues-url]. Be sure to include a clear and concise description of the issue, any steps needed to reproduce the problem, and any relevant code snippets.
+
+### Code of Conduct
+
+Please review our Code of Conduct before contributing. We expect all contributors to abide by the principles outlined in the document.
+
+### Contributing Guidelines
+
+Please review our Contributing Guidelines before contributing. These guidelines will provide details on how to contribute to the project, the coding standards we follow, and the development process we use.
+
+### Attribution
+
+This Contributing section is adapted from the Contributing Guidelines template created by PurpleBooth.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## License
+## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
+## 📧 Contact
 
-![Josafá Marengo](https://img.shields.io/badge/-Linkedin-000000?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/josafamarengo/)
-![Josafá Marengo](https://img.shields.io/badge/-Email-000000?style=flat&logo=Gmail&logoColor=white&link=https://josafa.com.br/#contact)
-![Josafá Marengo](https://img.shields.io/badge/-Portfolio-000000?style=flat&logo=Google-Chrome&logoColor=white&link=https://josafa.com.br/)
+[![Linkedin][linkedin-shield]][linkedin-url]
+[![Email][email-shield]][email-url]
+[![Portfolio][site-shield]][site-url]
 
 
-## Acknowledgments
+
+## 🙏 Acknowledgments
 
 - [Ebazhanov](https://github.com/Ebazhanov) - [linkedin-skill-assessments-quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
 - [Alura](https://www.alura.com.br/) - AluraQuiz
@@ -208,4 +226,49 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://josafa.com.br">Josafá Marengo</a>
 </div>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- REPO LINK -->
+[repo-url]: https://github.com/josafamarengo/skill-assessments
+[issues-url]: https://github.com/josafamarengo/skill-assessments/issues
+
+<!-- SOCIAL LINKS -->
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://linkedin.com/in/josafamarengo
+
+[email-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[email-url]: https://josafa.com.br/#contact
+
+[site-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&logo=Google-chrome&logoColor=white
+[site-url]: https://josafa.com.br
+
+
+<!-- LANGUAGES -->
+[AWS]: https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white
+[Actions]: https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white
+[Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Native]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Kotlin]: https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white
+[Swift]: https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white
+[Redux]: https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white
+[Vue]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Angular]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Styled]: https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white
+[Tailwind]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[SaSS]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Rust]: https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white
+[Python]: https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white
+[R]: https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white
+[Oracle]: https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white
+[Elastic]: https://img.shields.io/badge/Elastic_Search-005571?style=for-the-badge&logo=elasticsearch&logoColor=white
+[Mongo]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[MySQL]: https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white
+[Neo4J]: https://img.shields.io/badge/Neo4j-018bff?style=for-the-badge&logo=neo4j&logoColor=white
+[Redis]: https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white
+[SQLite]: https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white
+[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+
 
