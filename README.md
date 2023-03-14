@@ -288,9 +288,9 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 [Native-url]: https://github.com/josafamarengo?tab=repositories&q=react-native
 
 [Typescript]: https://img.shields.io/badge/Typescript-22272e?style=for-the-badge&logo=typescript&logoColor=61DAFB
-[Typescript-url] :https://github.com/josafamarengo?tab=repositories&language=typescript
+[Typescript-url]:https://github.com/josafamarengo?tab=repositories&language=typescript
 
-[Javascript]:
+[Javascript]: https://img.shields.io/badge/Javascript-22272e?style=for-the-badge&logo=javascript&logoColor=61DAFB
 [Javascript-url]: https://github.com/josafamarengo?tab=repositories&language=javascript
 
 [Kotlin]: https://img.shields.io/badge/Kotlin-22272e?&style=for-the-badge&logo=kotlin&logoColor=white
