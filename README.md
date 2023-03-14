@@ -5,10 +5,6 @@
 ![lighthouse_best-practices](https://user-images.githubusercontent.com/88048411/225086019-1d6ec29f-5526-45bc-bbf9-1f934ab4aa83.svg)
 ![lighthouse_performance](https://user-images.githubusercontent.com/88048411/225086021-d6aa94a4-b502-4558-b0b4-aa0b54cf1e3c.svg)
 ![lighthouse_seo](https://user-images.githubusercontent.com/88048411/225086026-ce237e67-5653-41b1-8adb-84ab32dd53d3.svg)
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
@@ -47,7 +43,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -55,6 +50,7 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 
+<a name="about-the-project"></a>
 ## ℹ️ About The Project
 
 ![skill-assessments Home Screen Shot](./src/assets/img/screenshots/home.png)
@@ -118,7 +114,7 @@ with open(nome_arquivo, 'w') as f:
 
 From there, I created the front end to use the constant data in the JSON files.
 
-### Build With
+### Built With
 
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js&logoColor=white)![React](https://img.shields.io/badge/-React-000000?style=flat&logo=react&logoColor=61DAFB)![TypeScript](https://img.shields.io/badge/-TypeScript-000000?style=flat&logo=typescript&logoColor=007ACC)
 
@@ -126,6 +122,7 @@ From there, I created the front end to use the constant data in the JSON files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="getting-started"></a>
 ## 🚀 Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -172,6 +169,7 @@ yarn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="roadmap"></a>
 ## 🗺️ Roadmap
 
 See the [open issues](https://github.com/josafamarengo/skill-assessments/issues) for a list of proposed features (and known issues).
@@ -180,6 +178,7 @@ See the [open issues](https://github.com/josafamarengo/skill-assessments/issues)
 - [ ] Add Authentication
 - [ ] Add a profile page
 
+<a name="contributing"></a>
 ## 👥 Contributing
 
 Any contributions you make are **greatly appreciated**. Before you get started, please take a moment to review our Code of Conduct and Contributing Guidelines.
@@ -223,18 +222,19 @@ This Contributing section is adapted from the Contributing Guidelines template c
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="license"></a>
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+<a name="contact"></a>
 ## 📧 Contact
 
 [![Linkedin][linkedin-shield]][linkedin-url]
 [![Email][email-shield]][email-url]
 [![Portfolio][site-shield]][site-url]
 
-
-
+<a name="acknowledgments"></a>
 ## 🙏 Acknowledgments
 
 - [Ebazhanov](https://github.com/Ebazhanov) - [linkedin-skill-assessments-quizzes](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes)
@@ -254,15 +254,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [repo-url]: https://github.com/josafamarengo/skill-assessments
 [issues-url]: https://github.com/josafamarengo/skill-assessments/issues
 
-[contributors-shield]: https://img.shields.io/github/contributors/josafamarengo/skill-assessments.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/josafamarengo/skill-assessments.svg?style=flat
 [contributors-url]: https://github.com/josafamarengo/skill-assessments/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/josafamarengo/skill-assessments.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/josafamarengo/skill-assessments.svg?style=flat
 [forks-url]: https://github.com/josafamarengo/skill-assessments/network/members
-[stars-shield]: https://img.shields.io/github/stars/josafamarengo/skill-assessments.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/josafamarengo/skill-assessments.svg?style=flat
 [stars-url]: https://github.com/josafamarengo/skill-assessments/stargazers
-[issues-shield]: https://img.shields.io/github/issues/josafamarengo/skill-assessments.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/josafamarengo/skill-assessments.svg?style=flat
 [issues-url]: https://github.com/josafamarengo/skill-assessments/issues
-[license-shield]: https://img.shields.io/github/license/josafamarengo/skill-assessments.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/josafamarengo/skill-assessments.svg?style=flat
 [license-url]: https://github.com/josafamarengo/skill-assessments/blob/master/LICENSE.txt
 
 <!-- SOCIAL LINKS -->
