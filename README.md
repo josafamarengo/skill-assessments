@@ -116,7 +116,7 @@ From there, I created the front end to use the constant data in the JSON files.
 
 ### Built With
 
-[![Next.js][Next]][Next-url][![React][React]][React-url][![TypeScript][Typescript]][Typescript-url]![Tailwind CSS][tailwind]
+![Next.js][Next]![React][React]![TypeScript][TypeScript]![Tailwind CSS][tailwind]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -301,3 +301,5 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 [Python]: https://img.shields.io/badge/Python-22272e?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://github.com/josafamarengo?tab=repositories&language=python
+  
+[Tailwind]: https://img.shields.io/badge/Tailwindcss-22272e?style=for-the-badge&logo=tailwindcss&logoColor=white
