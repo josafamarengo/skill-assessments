@@ -225,7 +225,7 @@ This Contributing section is adapted from the Contributing Guidelines template c
 <a name="license"></a>
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
 
 <a name="contact"></a>
 ## 📧 Contact
