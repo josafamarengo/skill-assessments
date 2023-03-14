@@ -263,7 +263,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/josafamarengo/skill-assessments.svg?style=flat
 [issues-url]: https://github.com/josafamarengo/skill-assessments/issues
 [license-shield]: https://img.shields.io/github/license/josafamarengo/skill-assessments.svg?style=flat
-[license-url]: https://github.com/josafamarengo/skill-assessments/blob/master/LICENSE.txt
+[license-url]: https://github.com/josafamarengo/skill-assessments/blob/main/LICENSE.md
 
 <!-- SOCIAL LINKS -->
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
