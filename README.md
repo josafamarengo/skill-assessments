@@ -116,7 +116,7 @@ From there, I created the front end to use the constant data in the JSON files.
 
 ### Built With
 
-![Next.js][next]![React][react]![TypeScript][typescript]![Tailwind CSS][tailwind]
+[![Next.js][Next]][Next-url][![React][React]][React-url][![TypeScript][Typescript]][Typescript-url]![Tailwind CSS][tailwind]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -276,29 +276,28 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 <!-- LANGUAGES -->
 [AWS]: https://img.shields.io/badge/Amazon_AWS-22272e?style=for-the-badge&logo=amazonaws&logoColor=white
-[Actions]: https://img.shields.io/badge/GitHub_Actions-22272e?style=for-the-badge&logo=github-actions&logoColor=white
+[AWS-url]: https://github.com/josafamarengo?tab=repositories&q=aws
+  
 [Next]: https://img.shields.io/badge/next.js-22272e?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://github.com/josafamarengo?tab=repositories&q=next
+
 [React]: https://img.shields.io/badge/React-22272e?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://github.com/josafamarengo?tab=repositories&q=react
+
 [Native]: https://img.shields.io/badge/React_Native-22272e?style=for-the-badge&logo=react&logoColor=61DAFB
+[Native-url]: https://github.com/josafamarengo?tab=repositories&q=react-native
+
 [Typescript]: https://img.shields.io/badge/Typescript-22272e?style=for-the-badge&logo=typescript&logoColor=61DAFB
+[Typescript-url] :https://github.com/josafamarengo?tab=repositories&language=typescript
+
+[Javascript]:
+[Javascript-url]: https://github.com/josafamarengo?tab=repositories&language=javascript
+
 [Kotlin]: https://img.shields.io/badge/Kotlin-22272e?&style=for-the-badge&logo=kotlin&logoColor=white
-[Swift]: https://img.shields.io/badge/Swift-22272e?style=for-the-badge&logo=swift&logoColor=white
-[Redux]: https://img.shields.io/badge/Redux-22272e?style=for-the-badge&logo=redux&logoColor=white
-[Vue]: https://img.shields.io/badge/Vue.js-22272e?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Kotlin-url]: https://github.com/josafamarengo?tab=repositories&language=kotlin
+
 [Angular]: https://img.shields.io/badge/Angular-22272e?style=for-the-badge&logo=angular&logoColor=white
-[Styled]: https://img.shields.io/badge/styled--components-22272e?style=for-the-badge&logo=styled-components&logoColor=white
-[Tailwind]: https://img.shields.io/badge/Tailwind_CSS-22272e?style=for-the-badge&logo=tailwind-css&logoColor=white
-[SaSS]: https://img.shields.io/badge/Sass-22272e?style=for-the-badge&logo=sass&logoColor=white
-[Rust]: https://img.shields.io/badge/Rust-22272e?style=for-the-badge&logo=rust&logoColor=white
+[Angular]: https://github.com/josafamarengo?tab=repositories&q=angular
+
 [Python]: https://img.shields.io/badge/Python-22272e?style=for-the-badge&logo=python&logoColor=white
-[R]: https://img.shields.io/badge/R-22272e?style=for-the-badge&logo=r&logoColor=white
-[Oracle]: https://img.shields.io/badge/Oracle-22272e?style=for-the-badge&logo=Oracle&logoColor=white
-[Elastic]: https://img.shields.io/badge/Elastic_Search-22272e?style=for-the-badge&logo=elasticsearch&logoColor=white
-[Mongo]: https://img.shields.io/badge/MongoDB-22272e?style=for-the-badge&logo=mongodb&logoColor=white
-[MySQL]: https://img.shields.io/badge/MySQL-22272e?style=for-the-badge&logo=mysql&logoColor=white
-[Neo4J]: https://img.shields.io/badge/Neo4j-22272e?style=for-the-badge&logo=neo4j&logoColor=white
-[Redis]: https://img.shields.io/badge/redis-22272e.svg?&style=for-the-badge&logo=redis&logoColor=white
-[SQLite]: https://img.shields.io/badge/SQLite-22272e?style=for-the-badge&logo=sqlite&logoColor=white
-[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-22272e?style=for-the-badge&logo=postgresql&logoColor=white
-
-
+[Python-url]: https://github.com/josafamarengo?tab=repositories&language=python
