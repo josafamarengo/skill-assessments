@@ -276,30 +276,12 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 <!-- LANGUAGES -->
 [AWS]: https://img.shields.io/badge/Amazon_AWS-22272e?style=for-the-badge&logo=amazonaws&logoColor=white
-[AWS-url]: https://github.com/josafamarengo?tab=repositories&q=aws
-  
 [Next]: https://img.shields.io/badge/next.js-22272e?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://github.com/josafamarengo?tab=repositories&q=next
-
 [React]: https://img.shields.io/badge/React-22272e?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://github.com/josafamarengo?tab=repositories&q=react
-
 [Native]: https://img.shields.io/badge/React_Native-22272e?style=for-the-badge&logo=react&logoColor=61DAFB
-[Native-url]: https://github.com/josafamarengo?tab=repositories&q=react-native
-
 [Typescript]: https://img.shields.io/badge/Typescript-22272e?style=for-the-badge&logo=typescript&logoColor=61DAFB
-[Typescript-url]:https://github.com/josafamarengo?tab=repositories&language=typescript
-
 [Javascript]: https://img.shields.io/badge/Javascript-22272e?style=for-the-badge&logo=javascript&logoColor=61DAFB
-[Javascript-url]: https://github.com/josafamarengo?tab=repositories&language=javascript
-
 [Kotlin]: https://img.shields.io/badge/Kotlin-22272e?&style=for-the-badge&logo=kotlin&logoColor=white
-[Kotlin-url]: https://github.com/josafamarengo?tab=repositories&language=kotlin
-
 [Angular]: https://img.shields.io/badge/Angular-22272e?style=for-the-badge&logo=angular&logoColor=white
-[Angular]: https://github.com/josafamarengo?tab=repositories&q=angular
-
-[Python]: https://img.shields.io/badge/Python-22272e?style=for-the-badge&logo=python&logoColor=white
-[Python-url]: https://github.com/josafamarengo?tab=repositories&language=python
-  
+[Python]: https://img.shields.io/badge/Python-22272e?style=for-the-badge&logo=python&logoColor=white  
 [Tailwind]: https://img.shields.io/badge/Tailwindcss-22272e?style=for-the-badge&logo=tailwindcss&logoColor=white
