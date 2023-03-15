@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "readme": "node ./src/scripts/buildReadme.js"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
@@ -30,6 +30,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "autoprefixer": "^10.4.13",
+    "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }
