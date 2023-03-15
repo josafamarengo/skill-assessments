@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitmsg": "commitlint -x @commitlint/config-conventional -E GIT_PARAMS"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
