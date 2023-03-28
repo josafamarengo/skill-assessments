@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import Loading from "@/components/molecules/Loading";
@@ -94,7 +95,7 @@ export default function QuizPage({ questions }: QuizPageProps) {
   }, [showScore]);
 
   return (
-    <div className="bg-bg-light w-screen">
+    <div className="bg-bg-light w-screen ">
       <Head>
         <title>{thisPath}</title>
       </Head>
@@ -134,7 +135,7 @@ export default function QuizPage({ questions }: QuizPageProps) {
                       disabled={submitted}
                       className={`
                         px-4 py-2 rounded-lg border-2 border-gray-400 mr-4 w-full
-                        ${selectedAlternative === index && "bg-gray-200"}
+                        ${selectedAlternative === index && "bg-gray-600 text-white"}
                         ${submitted && alternative.is_correct && "bg-green-400"}
                       `}
                       onClick={() => setSelectedAlternative(index)}

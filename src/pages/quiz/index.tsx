@@ -29,16 +29,21 @@ interface Alternative {
 function Quiz() {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [data, setData] = useState<QuizProps[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("/api/db");
-      const data = await response.json();
+      const dataJSON = await response.json();
+      // filtrar por search
+        const data = dataJSON.filter((item: QuizProps) => {
+            return item.title.toLowerCase().includes(search.toLowerCase());
+        });
       setData(data);
     }
 
     fetchData();
-  }, []);
+  }, [search]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,6 +65,13 @@ function Quiz() {
                 <span className="block">
                   Choose the skill you want to train
                 </span>
+                <input
+                    type="text"
+                    className="border border-gray-400 rounded-lg shadow-sm mt-1 block w-1/2 h-10 p-2 mx-auto sm:text-sm"
+                    placeholder="Search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
               </h2>
 
               <div
