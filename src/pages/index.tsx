@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 // import Input from "../components/atoms/Input";
@@ -14,7 +14,7 @@ export default function Home() {
         <title>Skill Quiz | Test your knowledge</title>
         <meta
           name="description"
-          content="Boost Your Professional Profile with LinkedIn Skill Assessments: Take the Test Now!"
+          content="Boost Your Professional Profile with LinkedIn Skill Assessments."
         />
       </Head>
       <section className="w-screen h-[calc(100vh-4rem)] flex flex-col justify-center items-center">
@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center">
             <button
-              className=" 
+              className="
                 bg-primary-light text-white button
               "
               onClick={() => router.push("/quiz")}
